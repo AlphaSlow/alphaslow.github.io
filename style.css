@@ -245,6 +245,14 @@ footer p {
         display: flex; /* Show the vertical nav when 'active' class is present */
     }
 
+    /* Correct CSS for the dropdown menu on mobile */
+    .nav-list.active .dropdown-menu {
+        display: block;
+        position: static;
+        box-shadow: none;
+        background-color: #444;
+    }
+
     /* Ensure the dropdown menu is always visible when the main mobile menu is active */
     .nav-list.active > .nav-item.dropdown > .dropdown-menu {
         display: block;

@@ -42,3 +42,9 @@ function updateLanguageLinks() {
         langText.textContent = '한국어';
     }
 }
+
+// Function to toggle the mobile menu's active state
+function toggleMenu() {
+    const navList = document.getElementById('mobile-nav-list');
+    navList.classList.toggle('active');
+}
