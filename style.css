@@ -247,7 +247,7 @@ footer p {
 
     .hamburger-menu {
         margin-left: auto; /* Push the button to the far right */
-        display: block; /* Show the hamburger button on mobile */
+        display: block; 
     }
 
     .nav-item {
