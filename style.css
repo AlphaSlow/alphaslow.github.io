@@ -245,15 +245,12 @@ footer p {
         display: flex; /* Show the vertical nav when 'active' class is present */
     }
 
-    /* Show the dropdown menu when the mobile nav list is active */
-    .nav-list.active .dropdown-menu {
+    /* Ensure the dropdown menu is always visible when the main mobile menu is active */
+    .nav-list.active > .nav-item.dropdown > .dropdown-menu {
         display: block;
-        position: static; /* Allows the dropdown to flow with the document on mobile */
-    }
-
-    /* Also, ensure the parent list item is a block element to take up full width */
-    .nav-list.active .nav-item.dropdown {
-        width: 100%;
+        position: static;
+        /* You can add a background color here if you want to differentiate it */
+        /* background-color: #333; */
     }
 
     .hamburger-menu {
