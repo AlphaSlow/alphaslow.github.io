@@ -3,26 +3,37 @@
         <a href="#" class="navbar-logo-left">
             <img src="images/su logo.png" alt="Left Logo">
         </a>
-        <div class="hamburger-and-language-container">
-            <button class="hamburger-menu">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
-            <div class="language-selector">
-                </div>
+        <button class="hamburger-menu" onclick="toggleMenu()">
+            &#9776;
+            <!-- <a href="#about">About</a>
+            <a href="#news">News</a>
+            <a href="contact.html">Contact</a> -->
+        </button>
+        <ul class="nav-list" id="mobile-nav-list">
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link">Movies</a>
+                <ul class="dropdown-menu">
+                    <li><a href="movies1.html" class="dropdown-link">Movies 1</a></li>
+                    <li><a href="movies2.html" class="dropdown-link">Movies 2</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="other.html" class="nav-link">Other</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <div id="language-switcher">
+            <a href="#" class="language-link">
+                <img src="" alt="Language Flag" class="language-flag">
+                <span class="language-text"></span>
+            </a>
         </div>
+        <a href="#" class="navbar-logo-right">
+            <img src="images/su logo.png" alt="Right Logo">
+        </a>
     </div>
-    <ul class="navbar-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><li class="dropdown">
-            <a href="#">Movies</a>
-            <ul class="dropdown-content">
-                <li><a href="movies1.html">Movies 1</a></li>
-                <li><a href="movies2.html">Movies 2</a></li>
-            </ul>
-        </li>
-        <li><a href="#">Contact</a></li>
-    </ul>
 </nav>
+<script>
+    function toggleMenu() {
+        const navList = document.getElementById('mobile-nav-list');
+        navList.classList.toggle('active');
+    }
+</script>
