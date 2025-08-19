@@ -3,57 +3,672 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="English practice, ESL, EFL, language learning, short films, interactive lessons">
-    <meta name="description" content="Improve your English with interactive lessons based on engaging short films. Practice listening, comprehension, and vocabulary.">
-    <title>English Practice With Short Films</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="keywords" content="English lessons, online English courses, experienced teachers, fun curriculum, free lessons, English for Children, Adult Conversation, Test Preparation">
+    <meta name="description" content="Learn English with experienced teachers through our fun and effective online programs. We offer courses for all ages and levels, including free lessons.">
+    <title>Modern English Academy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    </head>
+    <style>
+        /* Additional custom styles for the new index.html */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+
+        /* Hero Section with a breakfast image */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/breakfast.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+        }
+
+        .hero-section p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .primary-button {
+            background-color: #28a745;
+        }
+
+        .primary-button:hover {
+            background-color: #218838;
+        }
+
+        /* New button style for "Free Practice" */
+        .secondary-button {
+            background-color: #00a896; /* Changed to teal color */
+            color: white; /* Changed to white for better contrast */
+        }
+
+        .secondary-button:hover {
+            background-color: #008f80;
+        }
+
+        .section {
+            padding: 30px 20px 60px 20px; /* Reduced top padding */
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        /* Keep original padding for the About Us section */
+        #about.section {
+            padding-top: 60px;
+        }
+
+        /* Reduce the space above other section headers */
+        .section h2 {
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        /* Updated About Us Section styles for better responsiveness */
+        .about-section-wrapper {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/people.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 60px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .about-section-wrapper h3,
+        .about-section-wrapper p {
+            max-width: 600px;
+            color: white;
+        }
+
+        .benefits-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .benefit-item {
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            flex: 1 1 250px;
+            max-width: 350px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .benefit-item h4, .benefit-item p {
+            color: #333; /* Explicitly set the text color to ensure it's visible */
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .benefit-item i {
+            font-size: 2.5em;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .benefit-item h4 {
+            margin: 0 0 5px 0;
+        }
+
+        /* Courses section with rotating carousel */
+        .courses-container {
+            position: relative;
+            overflow: hidden;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .courses-carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            gap: 20px; /* Add a gap between cards */
+        }
+
+        .course-card {
+            min-width: calc(33.33% - 13.33px); /* Adjust width for gap */
+            box-sizing: border-box;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .course-card {
+                min-width: 100%;
+            }
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .course-card img {
+            max-width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 10;
+            font-size: 1.5em;
+            border-radius: 50%;
+            transition: opacity 0.3s ease;
+        }
+
+        .carousel-button.prev {
+            left: 10px;
+        }
+
+        .carousel-button.next {
+            right: 10px;
+        }
+
+        .carousel-button.disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .teachers-grid {
+            display: grid;
+            /* Adjust the minmax value to make the cards narrower */
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .teacher-card {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .teacher-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #007bff;
+        }
+
+        /* Restructured Contact section for side-by-side layout */
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .contact-info-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Changed to left-align items */
+            gap: 5px;
+        }
+
+        /* New styles for the contact images */
+        .contact-item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-item img:hover {
+            transform: scale(1.1);
+        }
+
+        .contact-item p {
+            margin: 0;
+            font-size: 1.1em;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            width: 100%;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+        }
+
+        .contact-form button {
+            /* Adjusted width and padding for a smaller button */
+            width: auto;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (min-width: 992px) {
+            .contact-container {
+                flex-direction: row;
+                justify-content: center;
+                /* Aligned items to the center for vertical centering */
+                align-items: stretch; /* Stretched items to be the same height */
+                gap: 20px; /* Added gap between boxes */
+            }
+
+            .contact-info-wrapper {
+                flex: 0 1 auto; /* Flexbox will now fit the content */
+                flex-direction: column;
+                justify-content: center; /* Vertically centered items within the box */
+                text-align: left;
+                gap: 40px; /* Added more space between items */
+                padding: 20px 30px; /* Reduced top/bottom padding to tighten the box */
+            }
+
+            .contact-form {
+                flex: 1; /* Made the right box take up the remaining space */
+                max-width: none;
+            }
+
+            .contact-item {
+                flex-direction: row;
+                align-items: center;
+                gap: 15px;
+            }
+        }
+
+        /* New styles for the book carousel */
+        .book-viewer {
+            position: relative;
+            width: 100%;
+            max-width: 750px; /* Reduced max-width for smaller images */
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 0 auto; /* Center the viewer */
+        }
+
+        .book-carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .book-page {
+            min-width: 50%; /* Show 2 images at a time */
+            box-sizing: border-box;
+            padding: 5px; /* Add small padding to bring images closer */
+        }
+
+        .book-page img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .sample-lesson-section {
+            display: flex;
+            flex-direction: column;
+            /* Increased gap for more space below the carousel */
+            gap: 40px;
+            align-items: center;
+        }
+
+        .sample-lesson-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
 <body>
     <header id="header-placeholder"></header>
 
-    <div class="page-content-wrapper">
-        <h1>Welcome to English Practice With Short Films!</h1>
-
-        <section class="introduction">
-            <p>Welcome to our platform designed to help you improve your English skills through the engaging medium of short films. Here, you'll find interactive exercises focused on listening comprehension, vocabulary building, and understanding real-world English usage.</p>
-            <p>Each film comes with tailored activities to make your learning experience effective and enjoyable. Dive in and start practicing today!</p>
+    <main>
+        <!-- Section 1: Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Unlock Your English Potential</h1>
+                <p>Interactive and fun online English lessons with experienced teachers.</p>
+                <!-- Added a new button for "Free Practice" -->
+                <a href="#courses" class="button">Explore Courses</a>
+                <a href="movies1.html" class="button secondary-button">Free Practice</a>
+                <a href="#contact" class="button primary-button">Contact Us</a>
+            </div>
         </section>
 
-        <section class="movies-list section">
-            <h2>Our Films</h2>
-            <div class="movie-card-container">
-                <div class="movie-card">
-                    <h3>Don't Look Away</h3>
-                    <p>A suspenseful short film perfect for intermediate learners.</p>
-                    <a href="dla.html" class="button">Start Learning</a>
+        <!-- Section 2: About Us -->
+        <section id="about" class="section">
+            <h2 style="text-align: center; margin-bottom: 50px;">About Us</h2>
+            <div class="about-section-wrapper">
+                <h3>Our Mission</h3>
+                <p>At Modern English Academy, we're dedicated to helping you achieve fluency and confidence in English. Our mission is to provide high-quality, engaging, and accessible language education for students of all ages and levels. We believe that learning a language should be an inspiring journey, not a chore.</p>
+                <!-- Removed the benefits-overlay div to simplify the layout -->
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <h4>Experienced Teachers</h4>
+                        <p>Our native-speaking instructors are certified and passionate about teaching.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-book-open"></i>
+                        <h4>Fun Curriculum</h4>
+                        <p>We use an interactive, story-based approach to make learning enjoyable and effective.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-laptop-code"></i>
+                        <h4>Free Online Lessons</h4>
+                        <p>Try our program with a free introductory lesson to see the difference for yourself!</p>
+                    </div>
                 </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- Section 3: Our Online Courses (with horizontal tabs) -->
+        <section id="courses" class="section">
+            <h2 style="text-align: center;">Our Online Courses</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">We offer a range of programs designed to meet your specific learning goals, from building foundational skills to mastering advanced conversation.</p>
+            <div class="courses-container">
+                <div class="courses-carousel" id="coursesCarousel">
+                    <!-- Original cards - no clones -->
+                    <div class="course-card">
+                        <img src="images/adult conversation.png" alt="People having an adult conversation">
+                        <h3>Adult Conversation</h3>
+                        <p>Improve your fluency and confidence with real-world conversation practice. Our classes focus on everyday topics and practical vocabulary.</p>
+                    </div>
+                    <div class="course-card">
+                        <img src="images/Young girl Zoom.png" alt="Children learning with a teacher">
+                        <h3>English for Children</h3>
+                        <p>Our fun and interactive curriculum helps children aged 6-12 build a strong foundation in English through games, stories, and songs.</p>
+                    </div>
+                    <div class="course-card">
+                        <img src="images/English test.png" alt="Student preparing for a test">
+                        <h3>Test Preparation</h3>
+                        <p>Get ready for exams like TOEIC, TOEFL, or IELTS with our expert-led test prep courses. Learn strategies and practice with authentic materials.</p>
+                    </div>
+                    <div class="course-card">
+                        <img src="images/business meeting.png" alt="A business person talking on a video call">
+                        <h3>Business English</h3>
+                        <p>Master the language of the workplace. Our Business English course covers professional communication, presentation skills, and business vocabulary.</p>
+                    </div>
+                    <div class="course-card">
+                        <img src="images/face-to-face.png" alt="Students in a face-to-face lesson">
+                        <h3>Face-to-face lessons</h3>
+                        <p>Experience personalized learning with our in-person lessons. Benefit from direct interaction and a collaborative classroom environment.</p>
+                    </div>
                 </div>
+                <button class="carousel-button prev" id="prev-course-btn">&#10094;</button>
+                <button class="carousel-button next" id="next-course-btn">&#10095;</button>
+            </div>
         </section>
 
-        <section class="how-it-works section">
-            <h2>How It Works</h2>
-            <ul>
-                <li>Watch a short film without subtitles first to test your general understanding.</li>
-                <li>Engage with interactive listening blanks to catch specific words and phrases.</li>
-                <li>Test your overall comprehension with multiple-choice questions.</li>
-                <li>Expand your vocabulary with drag-and-drop exercises.</li>
-                <li>Learn "Real Talk" – common expressions and slang used by native speakers.</li>
-            </ul>
+        <hr>
+
+        <!-- Section 4: Sample Lesson - UPDATED -->
+        <section id="sample-lesson" class="section">
+            <h2 style="text-align: center;">Sample Lesson</h2>
+            <div class="sample-lesson-section">
+                <div class="book-viewer">
+                    <div class="book-carousel" id="bookCarousel">
+                        <!-- Book pages as large images -->
+                        <div class="book-page">
+                            <img src="images/sample1.png" alt="Sample lesson page 1">
+                        </div>
+                        <div class="book-page">
+                            <img src="images/sample2.png" alt="Sample lesson page 2">
+                        </div>
+                        <div class="book-page">
+                            <img src="images/sample3.png" alt="Sample lesson page 3">
+                        </div>
+                        <div class="book-page">
+                            <img src="images/sample4.png" alt="Sample lesson page 4">
+                        </div>
+                        <div class="book-page">
+                            <img src="images/sample5.png" alt="Sample lesson page 5">
+                        </div>
+                        <div class="book-page">
+                            <img src="images/sample6.png" alt="Sample lesson page 6">
+                        </div>
+                    </div>
+                    <!-- Carousel buttons, similar to the courses section -->
+                    <button class="carousel-button prev" id="prev-book-btn">&#10094;</button>
+                    <button class="carousel-button next" id="next-book-btn">&#10095;</button>
+                </div>
+                <p class="sample-lesson-description">Online lessons are done in groups, if possible. This gives students access to different people and a wider range of activities. Students are encouraged to talk often, rather than just listening to a teacher. There are a variety of different activities, with a structured approach. This gives everyone a chance to speak, including those who often feel shy. Students usually find this more interesting and useful than traditional study.
+                <br><br>The lesson above is based on the short film "Timepiece". Students who sign up for the movie-based conversation course will receive a book with lessons like this one. Students will watch the movie at home and try to understand it. People who want extra practice can do the online activities before meeting with other students on Zoom. Take a look at the free online activities or contact us if you want more information about the lessons.</p>
+                <!-- Added buttons at the bottom of the section -->
+                <div class="sample-lesson-buttons">
+                    <a href="movies1.html" class="button secondary-button">Free Practice</a>
+                    <a href="#contact" class="button primary-button">Contact Us</a>
+                </div>
+            </div>
         </section>
 
-        <section class="get-started section">
-            <h2>Get Started</h2>
-            <p>Ready to improve your English? Choose a film from the list above and begin your journey!</p>
-            <a href="dla.html" class="button primary-button">Go to First Film: Don't Look Away</a>
+        <hr>
+
+        <!-- Section 5: Meet Our Teachers -->
+        <section id="teachers" class="section">
+            <h2 style="text-align: center;">Meet Our Teachers</h2>
+            <div class="teachers-grid">
+                <div class="teacher-card">
+                    <img src="https://images.unsplash.com/photo-1627161674488-842234027734?q=80&w=1740&auto=format&fit-crop" alt="Portrait of teacher Sarah">
+                    <h3>Ben</h3>
+                    <p>Sarah is a certified TESOL instructor with over 10 years of experience teaching English to students of all ages. She loves using engaging stories to make grammar fun.</p>
+                </div>
+                <div class="teacher-card">
+                    <img src="https://images.unsplash.com/photo-1582216259062-8149e8a01f5c?q=80&w=1740&auto=format&fit-crop" alt="Portrait of teacher John">
+                    <h3>Lisa</h3>
+                    <p>John specializes in business English and test preparation. With a background in corporate training, he brings a practical, real-world approach to his lessons.</p>
+                </div>
+            </div>
+        </div>
         </section>
 
-    </div>
+        <hr>
+
+        <!-- Section 6: Contact Us -->
+        <section id="contact" class="section">
+            <h2 style="text-align: center;">Contact Us</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Have questions about our programs or want to book a free lesson? Fill out the form below and we'll get back to you shortly!</p>
+            <div class="contact-container">
+                <div class="contact-info-wrapper">
+                    <div class="contact-item">
+                        <a href="https://open.kakao.com/o/sshXWlNh" target="_blank" rel="noopener">
+                           <img src="images/KakaoTalk_logo.svg" alt="Chat Icon">
+                        </a>
+                        <p>ID: lisamonkey</p>
+                    </div>
+                    <div class="contact-item">
+                        <a href="tel:+821021919106">
+                            <img src="images/phone logo.png" alt="Phone Icon">
+                        </a>
+                        <p>010-6218-9106</p>
+                    </div>
+                    <div class="contact-item">
+                        <a href="mailto:info@englishacademy.com">
+                           <img src="images/Mailtimelogo.png" alt="Email Icon">
+                        </a>
+                        <p>info@englishacademy.com</p>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <div id="footer-placeholder"></div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // JavaScript for the Courses carousel
+        const coursesCarousel = document.getElementById('coursesCarousel');
+        const prevCourseBtn = document.getElementById('prev-course-btn');
+        const nextCourseBtn = document.getElementById('next-course-btn');
+
+        const totalCards = coursesCarousel.children.length;
+        const visibleCards = 3;
+        let currentIndex = 0;
+
+        // Function to update the carousel position
+        const updateCarousel = () => {
+            const cardWidthWithGap = coursesCarousel.children[0].offsetWidth + 20;
+            const offset = -currentIndex * cardWidthWithGap;
+            coursesCarousel.style.transform = `translateX(${offset}px)`;
+            updateButtons();
+        };
+
+        // Function to handle button enabling/disabling
+        const updateButtons = () => {
+            prevCourseBtn.disabled = (currentIndex === 0);
+            nextCourseBtn.disabled = (currentIndex >= totalCards - visibleCards);
+        };
+
+        // Event listeners for carousel buttons
+        nextCourseBtn.addEventListener('click', () => {
+            if (currentIndex < totalCards - visibleCards) {
+                currentIndex++;
+                updateCarousel();
+            }
+        });
+
+        prevCourseBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            }
+        });
+
+        // JavaScript for the Sample Lesson book viewer carousel
+        const bookCarousel = document.getElementById('bookCarousel');
+        const prevBookBtn = document.getElementById('prev-book-btn');
+        const nextBookBtn = document.getElementById('next-book-btn');
+        const totalBookPages = bookCarousel.children.length;
+        const visibleBookPages = 2; // Show 2 pictures at a time
+        let currentBookIndex = 0;
+
+        // Function to update the book carousel position
+        const updateBookCarousel = () => {
+            const pageWidthWithGap = bookCarousel.children[0].offsetWidth;
+            const offset = -currentBookIndex * pageWidthWithGap;
+            bookCarousel.style.transform = `translateX(${offset}px)`;
+            updateBookButtons();
+        };
+
+        // Function to handle book carousel button enabling/disabling
+        const updateBookButtons = () => {
+            prevBookBtn.disabled = (currentBookIndex === 0);
+            nextBookBtn.disabled = (currentBookIndex >= totalBookPages - visibleBookPages);
+        };
+
+        // Event listeners for book carousel buttons
+        nextBookBtn.addEventListener('click', () => {
+            if (currentBookIndex < totalBookPages - visibleBookPages) {
+                currentBookIndex += visibleBookPages; // Jump 2 pictures
+                updateBookCarousel();
+            }
+        });
+
+        prevBookBtn.addEventListener('click', () => {
+            if (currentBookIndex > 0) {
+                currentBookIndex -= visibleBookPages; // Jump back 2 pictures
+                if (currentBookIndex < 0) {
+                    currentBookIndex = 0;
+                }
+                updateBookCarousel();
+            }
+        });
+
+        // Initialize the carousels
+        updateCarousel();
+        updateBookCarousel();
+    </script>
 </body>
 </html>
