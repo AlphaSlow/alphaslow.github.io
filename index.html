@@ -6,7 +6,7 @@
     <meta name="keywords" content="English lessons, online English courses, experienced teachers, fun curriculum, free lessons, English for Children, Adult Conversation, Test Preparation">
     <meta name="description" content="Learn English with experienced teachers through our fun and effective online programs. We offer courses for all ages and levels, including free lessons.">
     <title>Modern English Academy</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==x" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <style>
         /* Additional custom styles for the new index.html */
@@ -14,6 +14,8 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f4f7f6;
             color: #333;
+            /* Left-align all text by default */
+            text-align: left;
         }
 
         /* Hero Section with a breakfast image */
@@ -34,6 +36,13 @@
         .hero-section p {
             font-size: 1.2em;
             margin-bottom: 30px;
+        }
+
+        /* Add vertical space between buttons on small screens */
+        @media (max-width: 767px) {
+            .hero-section .button {
+                margin-bottom: 10px;
+            }
         }
 
         .button {
@@ -101,9 +110,10 @@
         }
 
         .about-section-wrapper h3,
-        .about-section-wrapper p {
+        .about-section-wrapper ul {
             max-width: 600px;
             color: white;
+            text-align: justify;
         }
 
         .benefits-grid {
@@ -159,6 +169,20 @@
             gap: 20px; /* Add a gap between cards */
         }
 
+        /* Change carousel to vertical stack on small screens */
+        @media (max-width: 768px) {
+            .courses-carousel {
+                flex-direction: column;
+                transform: none !important;
+            }
+            .course-card {
+                min-width: 100%;
+            }
+            .carousel-button {
+                display: none;
+            }
+        }
+
         .course-card {
             min-width: calc(33.33% - 13.33px); /* Adjust width for gap */
             box-sizing: border-box;
@@ -168,6 +192,10 @@
             padding: 20px;
             text-align: center;
             transition: transform 0.3s ease;
+        }
+
+        .course-card p {
+            text-align: justify;
         }
 
         @media (max-width: 768px) {
@@ -218,11 +246,14 @@
 
         .teachers-grid {
             display: grid;
-            /* Adjust the minmax value to make the cards narrower */
+            /* Adjusted minmax to make cards narrower and added a max-width to the grid itself */
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 30px;
             width: 100%;
             margin-top: 30px;
+            max-width: 600px; /* New rule to make the grid narrower */
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .teacher-card {
@@ -253,7 +284,7 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
-            text-align: center;
+            text-align: left; /* Left-align the content in the contact info box */
             background: white;
             padding: 30px;
             border-radius: 10px;
@@ -265,6 +296,15 @@
             flex-direction: column;
             align-items: flex-start; /* Changed to left-align items */
             gap: 5px;
+        }
+
+        /* Change contact-item to row on small screens */
+        @media (max-width: 992px) {
+            .contact-item {
+                flex-direction: row;
+                align-items: center;
+                gap: 15px;
+            }
         }
 
         /* New styles for the contact images */
@@ -399,6 +439,22 @@
             gap: 10px;
             margin-top: 20px;
         }
+
+        /* Re-center elements that need to be centered after global left alignment */
+        .hero-section, .hero-section h1, .hero-section p, .section h2, .contact-container, .contact-form {
+            text-align: center;
+        }
+
+        /* Override specific text alignment for the body and list items */
+        body {
+            text-align: left;
+        }
+        .teacher-card ul {
+            text-align: left;
+        }
+        .benefit-item p {
+            text-align: left;
+        }
     </style>
 </head>
 <body>
@@ -409,7 +465,7 @@
         <section class="hero-section">
             <div class="hero-content">
                 <h1>Unlock Your English Potential</h1>
-                <p>Interactive and fun online English lessons with experienced teachers.</p>
+                <p>Interactive and fun online English lessons with experienced teachers. Free online practice activities.</p>
                 <!-- Added a new button for "Free Practice" -->
                 <a href="#courses" class="button">Explore Courses</a>
                 <a href="movies1.html" class="button secondary-button">Free Practice</a>
@@ -422,23 +478,27 @@
             <h2 style="text-align: center; margin-bottom: 50px;">About Us</h2>
             <div class="about-section-wrapper">
                 <h3>Our Mission</h3>
-                <p>At Modern English Academy, we're dedicated to helping you achieve fluency and confidence in English. Our mission is to provide high-quality, engaging, and accessible language education for students of all ages and levels. We believe that learning a language should be an inspiring journey, not a chore.</p>
+                <ul>
+                    <li>Make the language learning journey feel fun and rewarding</li>
+                    <li>Help learners discover more effective ways to learn </li>
+                    <li>Inspire learners to develop on their own</li>
+                </ul>
                 <!-- Removed the benefits-overlay div to simplify the layout -->
                 <div class="benefits-grid">
                     <div class="benefit-item">
                         <i class="fas fa-chalkboard-teacher"></i>
                         <h4>Experienced Teachers</h4>
-                        <p>Our native-speaking instructors are certified and passionate about teaching.</p>
+                        <p>Our teachers have many years of experience with all kinds of students.</p>
                     </div>
                     <div class="benefit-item">
                         <i class="fas fa-book-open"></i>
                         <h4>Fun Curriculum</h4>
-                        <p>We use an interactive, story-based approach to make learning enjoyable and effective.</p>
+                        <p>We use real world materials, such as movies and books, so that students are exposed to real language.</p>
                     </div>
                     <div class="benefit-item">
                         <i class="fas fa-laptop-code"></i>
-                        <h4>Free Online Lessons</h4>
-                        <p>Try our program with a free introductory lesson to see the difference for yourself!</p>
+                        <h4>Comfortable Environment</h4>
+                        <p>Even in an online group, everyone can speak comfortably.</p>
                     </div>
                 </div>
             </div>
@@ -449,34 +509,34 @@
         <!-- Section 3: Our Online Courses (with horizontal tabs) -->
         <section id="courses" class="section">
             <h2 style="text-align: center;">Our Online Courses</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">We offer a range of programs designed to meet your specific learning goals, from building foundational skills to mastering advanced conversation.</p>
+            <!-- <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">While our online classes focus on adult conversation, we can create a program for almost anything you need. See some examples below.</p> -->
             <div class="courses-container">
                 <div class="courses-carousel" id="coursesCarousel">
                     <!-- Original cards - no clones -->
                     <div class="course-card">
                         <img src="images/adult conversation.png" alt="People having an adult conversation">
                         <h3>Adult Conversation</h3>
-                        <p>Improve your fluency and confidence with real-world conversation practice. Our classes focus on everyday topics and practical vocabulary.</p>
+                        <p>Improve your fluency and confidence with real-world conversation practice. We keep students active and make sure the topics are varied and interesting.</p>
                     </div>
                     <div class="course-card">
                         <img src="images/Young girl Zoom.png" alt="Children learning with a teacher">
                         <h3>English for Children</h3>
-                        <p>Our fun and interactive curriculum helps children aged 6-12 build a strong foundation in English through games, stories, and songs.</p>
+                        <p>Our fun and interactive curriculum helps children of all ages build a strong foundation in English through games, stories, and songs.</p>
                     </div>
                     <div class="course-card">
                         <img src="images/English test.png" alt="Student preparing for a test">
                         <h3>Test Preparation</h3>
-                        <p>Get ready for exams like TOEIC, TOEFL, or IELTS with our expert-led test prep courses. Learn strategies and practice with authentic materials.</p>
+                        <p>Get ready for exams like TOEIC Speaking, TOEFL, or OPIC with our expert-led test prep courses. Learn strategies and practice with authentic materials.</p>
                     </div>
                     <div class="course-card">
                         <img src="images/business meeting.png" alt="A business person talking on a video call">
                         <h3>Business English</h3>
-                        <p>Master the language of the workplace. Our Business English course covers professional communication, presentation skills, and business vocabulary.</p>
+                        <p>Master the language of the workplace. Learn from someone who has experienced the business world.</p>
                     </div>
                     <div class="course-card">
                         <img src="images/face-to-face.png" alt="Students in a face-to-face lesson">
                         <h3>Face-to-face lessons</h3>
-                        <p>Experience personalized learning with our in-person lessons. Benefit from direct interaction and a collaborative classroom environment.</p>
+                        <p>Students in Pohang can experience personalized learning. We have students of all ages.</p>
                     </div>
                 </div>
                 <button class="carousel-button prev" id="prev-course-btn">&#10094;</button>
@@ -533,14 +593,24 @@
             <h2 style="text-align: center;">Meet Our Teachers</h2>
             <div class="teachers-grid">
                 <div class="teacher-card">
-                    <img src="https://images.unsplash.com/photo-1627161674488-842234027734?q=80&w=1740&auto=format&fit-crop" alt="Portrait of teacher Sarah">
+                    <img src="https://images.unsplash.com/photo-1627161674488-842234027734?q=80&w=1740&auto=format&fit-crop" alt="Portrait of teacher Ben">
                     <h3>Ben</h3>
-                    <p>Sarah is a certified TESOL instructor with over 10 years of experience teaching English to students of all ages. She loves using engaging stories to make grammar fun.</p>
+                    <ul>
+                        <li>MBA, MSc (Eng)</li>
+                        <li>Native English speaker</li>
+                        <li>14 years experience (university, public schools, corporate)
+                        <li>Currently learning his fifth language</li>
+                    </ul>
                 </div>
                 <div class="teacher-card">
-                    <img src="https://images.unsplash.com/photo-1582216259062-8149e8a01f5c?q=80&w=1740&auto=format&fit-crop" alt="Portrait of teacher John">
+                    <img src="https://images.unsplash.com/photo-1582216259062-8149e8a01f5c?q=80&w=1740&auto=format&fit-crop" alt="Portrait of teacher Lisa">
                     <h3>Lisa</h3>
-                    <p>John specializes in business English and test preparation. With a background in corporate training, he brings a practical, real-world approach to his lessons.</p>
+                    <ul>
+                        <li>Qualified teacher</li>
+                        <li>Fluent English speaker</li>
+                        <li>20 years experience (public school, private teaching)</li>
+                        <li>Loves people of all ages</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -551,7 +621,7 @@
         <!-- Section 6: Contact Us -->
         <section id="contact" class="section">
             <h2 style="text-align: center;">Contact Us</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Have questions about our programs or want to book a free lesson? Fill out the form below and we'll get back to you shortly!</p>
+            <!-- <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Have questions about our programs or want to book a free lesson? Fill out the form below and we'll get back to you shortly!</p> -->
             <div class="contact-container">
                 <div class="contact-info-wrapper">
                     <div class="contact-item">
