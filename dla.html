@@ -17,33 +17,34 @@
                 {
                     id: 'blank1',
                     solution: 'supposed',
-                    explanation: '이 문맥에서, "supposed to"는 "~하기로 되어 있다" 또는 "~해야 한다"는 의미입니다. Savannah는 엄마가 언제 도착할 예정인지 묻고 있습니다.',
+                    explanation:  '이 문맥에서, <q>supposed to<//q>는 <q>~하기로 되어 있다</q> 또는 <q>~해야 한다</q>는 의미입니다. Savannah는 엄마가 언제 도착할 예정인지 묻고 있습니다.',
                     videoSrc: 'clips/DLA/DLA Listening 1.mp4',
-                    transcript: '<i>Savannah</i>: Yeah, dad, when is mom <span class="blank-word" id="blank1" data-solution="supposed"></span> to get here again?<br><i>Dad:</i> &nbspAbout 4:30, but knowing her, she’ll probably be early.'
+                    transcript: '<i>Savannah</i>: Yeah, dad, when is mom <span class="blank-word"></span> to get here again?<br><i>Dad:</i> &nbspAbout 4:30, but knowing her, she’ll probably be early.'
                 },
                 {
                     id: 'blank2',
                     solution: 'staring',
-                    explanation: '"Staring at"은 무엇인가를 뚫어지게 또는 빤히 쳐다본다는 의미입니다. Savannah는 그 남자가 자신을 강렬하게 응시하고 있다고 느끼고 있습니다.',
+                    explanation: '<q>Staring at</q>은 무엇인가를 뚫어지게 또는 빤히 쳐다본다는 의미입니다. Savannah는 그 남자가 자신을 강렬하게 응시하고 있다고 느끼고 있습니다.',
                     videoSrc: 'clips/DLA/DLA Listening 2.mp4',
-                    transcript: '<i>Savannah:</i> Ok, cos, there\'s a weird man outside our window <span class="blank-word" id="blank2" data-solution="staring">_______</span> at me.<br><i>Dad:</i> A man? What does he look like?'
+                    transcript: '<i>Savannah:</i> Ok, cos, there\s a weird man outside our window <span class="blank-word"></span> at me.<br><i>Dad:</i> A man? What does he look like?'
                 },
                 {
                     id: 'blank3',
                     solution: 'Creepy',
-                    explanation: '"Creepy"는 불쾌한 두려움이나 불안감을 유발하는 것을 묘사합니다. Jim은 그 남자가 불안하게 보인다고 말하고 있습니다.',
+                    explanation: '<q>Creepy</q>는 불쾌한 두려움이나 불안감을 유발하는 것을 묘사합니다. Jim은 그 남자가 불안하게 보인다고 말하고 있습니다.',
                     videoSrc: 'clips/DLA/DLA Listening 3.mp4',
-                    transcript: '<i>Savannah:</i> You can see it too?<br><i>Jim:</i> Yeah. <span class="blank-word" id="blank3" data-solution="creepy">_______</span> suit guy. He’s staring at me.'
+                    transcript: '<i>Savannah:</i> You can see it too?<br><i>Jim:</i> Yeah. <span class="blank-word">_______</span> suit guy. He’s staring at me.'
                 },
                 {
                     id: 'blank4',
                     solution: 'going on',
-                    explanation: '"What\'s going on?"은 무슨 일이 일어나고 있는지 또는 상황이 어떤지 묻는 흔한 비격식 표현입니다. Savannah는 이상한 사건에 대한 설명을 요구하고 있습니다.',
+                    explanation: '<q>What\'s going on?</q>은 무슨 일이 일어나고 있는지 또는 상황이 어떤지 묻는 흔한 비격식 표현입니다. Savannah는 이상한 사건에 대한 설명을 요구하고 있습니다.',
                     videoSrc: 'clips/DLA/DLA Listening 4.mp4',
-                    transcript: '<i>Savannah</i>: Dad, what the hell was that? What\'s <span class="blank-word" id="blank4" data-solution="going on">_______</span>?'
+                    transcript: '<i>Savannah</i>: Dad, what the hell was that? What\'s <span class="blank-word">_______</span>?'
                 }
                 // ... add more listening blanks as needed
             ],
+
             comprehensionAnswers: {
                 q1: "b", q2: "b", q3: "d", q4: "c", q5: "b"
             },
@@ -94,71 +95,6 @@
 
         <div id="listening" class="section">
             <h2>Listening</h2>
-            <div class="instruction-box"><i class="fas fa-lightbulb icon"></i>힌트 버튼을 누르면 더 많은 정보가 보입니다. Solution 버튼을 누르면 전체 정답을 볼 수 있습니다.
-            </div>
-
-            <div class="listening-clip">
-                <div class="clip-video">
-                    <video id="listening1-video" controls>
-                        <source src="clips/DLA/DLA Listening 1.mp4" type="video/mp4">
-                        Your browser can not play this video.
-                    </video>
-                </div>
-                <div class="clip-transcript">
-                    <p><i>Savannah</i>: Yeah, dad, when is mom <span class="blank-word" id="blank1" data-solution="supposed" data-explanation="이 문맥에서, 'supposed to'는 '예정된' 또는 '해야 한다'는 의미입니다. Savannah는 엄마가 언제 도착할 예정인지 묻고 있습니다."></span> to get here again?
-                    <br><i>Dad:</i> &nbspAbout 4:30, but knowing her, she’ll probably be early.</p>
-                    <div class="controls-and-feedback"> <button class="hint-button" data-blank-id="blank1" data-solution="supposed">Hint</button>
-                        <button class="solution-button" data-blank-id="blank1" data-solution="supposed">Solution</button>
-                        <div class="feedback-box"></div>
-                    </div> </div>
-            </div>
-
-            <div class="listening-clip">
-                <div class="clip-video">
-                    <video id="listening2-video" controls>
-                        <source src="clips/DLA/DLA Listening 2.mp4" type="video/mp4">
-                        Your browser can not play this video.
-                    </video>
-                </div>
-                <div class="clip-transcript">
-                    <p><i>Savannah:</i> Ok, cos, there's a weird man outside our window <span class="blank-word" id="blank2" data-solution="staring" data-explanation="'Staring at'은 무엇인가를 뚫어지게 또는 빤히 쳐다본다는 의미입니다. Savannah는 그 남자가 자신을 강렬하게 응시하고 있다고 느끼고 있습니다.">_______</span> at me.
-                    <br><i>Dad:</i> A man? What does he look like?</p>
-                    <div class="controls-and-feedback"> <button class="hint-button" data-blank-id="blank2" data-solution="staring">Hint</button>
-                        <button class="solution-button" data-blank-id="blank2" data-solution="staring">Solution</button>
-                        <div class="feedback-box"></div>
-                    </div> </div>
-            </div>
-
-            <div class="listening-clip">
-                <div class="clip-video">
-                    <video id="listening3-video" controls>
-                        <source src="clips/DLA/DLA Listening 3.mp4" type="video/mp4">
-                        Your browser can not play this video.
-                    </video>
-                </div>
-                <div class="clip-transcript">
-                    <p><i>Savannah:</i> You can see it too?
-                    <br><i>Jim:</i> Yeah. <span class="blank-word" id="blank3" data-solution="Creepy" data-explanation="'Creepy'는 불쾌한 두려움이나 불안감을 유발하는 것을 묘사합니다. Jim은 그 남자가 불안하게 보인다고 말하고 있습니다.">_______</span> suit guy. He’s staring at me. </p>
-                    <div class="controls-and-feedback"> <button class="hint-button" data-blank-id="blank3" data-solution="Creepy">Hint</button>
-                        <button class="solution-button" data-blank-id="blank3" data-solution="Creepy">Solution</button>
-                        <div class="feedback-box"></div>
-                    </div> </div>
-            </div>
-
-            <div class="listening-clip">
-                <div class="clip-video">
-                    <video id="listening4-video" controls>
-                        <source src="clips/DLA/DLA Listening 4.mp4" type="video/mp4">
-                        Your browser can not play this video.
-                    </video>
-                </div>
-                <div class="clip-transcript">
-                    <p><i>Savannah</i>: Dad, what the hell was that? What's <span class="blank-word" id="blank4" data-solution="going on" data-explanation="'What\'s going on?'은 무슨 일이 일어나고 있는지 또는 상황이 어떤지 묻는 흔한 비격식 표현입니다. Savannah는 이상한 사건에 대한 설명을 요구하고 있습니다.">_______</span>?</p>
-                    <div class="controls-and-feedback"> <button class="hint-button" data-blank-id="blank4" data-solution="going on">Hint</button>
-                        <button class="solution-button" data-blank-id="blank4" data-solution="going on">Solution</button>
-                        <div class="feedback-box"></div>
-                    </div> </div>
-            </div>
         </div>
 
 
@@ -210,6 +146,7 @@
                 </div>
             </div>
             <button class="check-answers-button">Check Answers</button>
+            <button class="reset-button">Reset</button>
             <div id="answer-feedback"></div>
         </div>
 
