@@ -17,28 +17,28 @@
                 {
                     id: 'blank1',
                     solution: 'supposed',
-                    explanation: 'In this context, "supposed to" means "expected to". Savannah is asking when her mother is expected to arrive.',
+                    explanation: '이 문맥에서, "supposed to"는 "~하기로 되어 있다" 또는 "~해야 한다"는 의미입니다. Savannah는 엄마가 언제 도착할 예정인지 묻고 있습니다.',
                     videoSrc: 'clips/DLA/DLA Listening 1.mp4',
                     transcript: '<i>Savannah</i>: Yeah, dad, when is mom <span class="blank-word" id="blank1" data-solution="supposed"></span> to get here again?<br><i>Dad:</i> &nbspAbout 4:30, but knowing her, she’ll probably be early.'
                 },
                 {
                     id: 'blank2',
                     solution: 'staring',
-                    explanation: '"Staring at" means looking hard at something or someone.',
+                    explanation: '"Staring at"은 무엇인가를 뚫어지게 또는 빤히 쳐다본다는 의미입니다. Savannah는 그 남자가 자신을 강렬하게 응시하고 있다고 느끼고 있습니다.',
                     videoSrc: 'clips/DLA/DLA Listening 2.mp4',
                     transcript: '<i>Savannah:</i> Ok, cos, there\'s a weird man outside our window <span class="blank-word" id="blank2" data-solution="staring">_______</span> at me.<br><i>Dad:</i> A man? What does he look like?'
                 },
                 {
                     id: 'blank3',
                     solution: 'Creepy',
-                    explanation: '"Creepy" describes something that causes an unpleasant feeling of fear or unease. Jim saying that the man makes him feel uncomfortable.',
+                    explanation: '"Creepy"는 불쾌한 두려움이나 불안감을 유발하는 것을 묘사합니다. Jim은 그 남자가 불안하게 보인다고 말하고 있습니다.',
                     videoSrc: 'clips/DLA/DLA Listening 3.mp4',
                     transcript: '<i>Savannah:</i> You can see it too?<br><i>Jim:</i> Yeah. <span class="blank-word" id="blank3" data-solution="creepy">_______</span> suit guy. He’s staring at me.'
                 },
                 {
                     id: 'blank4',
                     solution: 'going on',
-                    explanation: '"What\'s going on?" is similar to "What\'s happening?" or "What\'s the problem?".',
+                    explanation: '"What\'s going on?"은 무슨 일이 일어나고 있는지 또는 상황이 어떤지 묻는 흔한 비격식 표현입니다. Savannah는 이상한 사건에 대한 설명을 요구하고 있습니다.',
                     videoSrc: 'clips/DLA/DLA Listening 4.mp4',
                     transcript: '<i>Savannah</i>: Dad, what the hell was that? What\'s <span class="blank-word" id="blank4" data-solution="going on">_______</span>?'
                 }
@@ -58,13 +58,13 @@
                 { text: "She thought he looked ____.", correctWord: "creepy" },
                 { text: "Savannah covered his eyes with tape that she found in her ____.", correctWord: "drawer" }
             ],
-            // displayNavigationButtons: false // Set to false to hide the buttons
+            // displayNavigationButtons: false // Set to false to hide the buttons. No. Find this variable in script-movies.js
         };
     </script>
 
 </head>
 <body>
-    <header id="header-placeholder"></header>
+    <div id="header-placeholder" class="loaded"></div>
 
     <div class="page-content-wrapper">
         <h1>Don't Look Away</h1>
@@ -83,7 +83,6 @@
             <p><strong>Run Time:</strong> 8 minutes 20 seconds</p>
         </div>
 
-        <!-- These buttons can be hidden in style-movies.css -->
         <section id="nav-buttons-section" class="nav-sections hidden-by-default">
             <a href="#listening"><button>Listening</button></a>
             <a href="#comprehension1"><button>Test Your Understanding</button></a>
@@ -95,7 +94,7 @@
 
         <div id="listening" class="section">
             <h2>Listening</h2>
-            <div class="instruction-box"><i class="fas fa-lightbulb icon"></i>Press the Hint button as many times as you like to see more and more information. Press the Solution button to see the full answer.
+            <div class="instruction-box"><i class="fas fa-lightbulb icon"></i>힌트 버튼을 누르면 더 많은 정보가 보입니다. Solution 버튼을 누르면 전체 정답을 볼 수 있습니다.
             </div>
 
             <div class="listening-clip">
@@ -106,7 +105,7 @@
                     </video>
                 </div>
                 <div class="clip-transcript">
-                    <p><i>Savannah</i>: Yeah, dad, when is mom <span class="blank-word" id="blank1" data-solution="supposed" data-explanation="In this context, 'supposed to' means expected to or meant to. Savannah is asking when her mother is expected to arrive."></span> to get here again?
+                    <p><i>Savannah</i>: Yeah, dad, when is mom <span class="blank-word" id="blank1" data-solution="supposed" data-explanation="이 문맥에서, 'supposed to'는 '예정된' 또는 '해야 한다'는 의미입니다. Savannah는 엄마가 언제 도착할 예정인지 묻고 있습니다."></span> to get here again?
                     <br><i>Dad:</i> &nbspAbout 4:30, but knowing her, she’ll probably be early.</p>
                     <div class="controls-and-feedback"> <button class="hint-button" data-blank-id="blank1" data-solution="supposed">Hint</button>
                         <button class="solution-button" data-blank-id="blank1" data-solution="supposed">Solution</button>
@@ -122,7 +121,7 @@
                     </video>
                 </div>
                 <div class="clip-transcript">
-                    <p><i>Savannah:</i> Ok, cos, there's a weird man outside our window <span class="blank-word" id="blank2" data-solution="staring" data-explanation="'Staring at' means looking fixedly or intently at something or someone. Savannah feels a direct, intense gaze from the man.">_______</span> at me.
+                    <p><i>Savannah:</i> Ok, cos, there's a weird man outside our window <span class="blank-word" id="blank2" data-solution="staring" data-explanation="'Staring at'은 무엇인가를 뚫어지게 또는 빤히 쳐다본다는 의미입니다. Savannah는 그 남자가 자신을 강렬하게 응시하고 있다고 느끼고 있습니다.">_______</span> at me.
                     <br><i>Dad:</i> A man? What does he look like?</p>
                     <div class="controls-and-feedback"> <button class="hint-button" data-blank-id="blank2" data-solution="staring">Hint</button>
                         <button class="solution-button" data-blank-id="blank2" data-solution="staring">Solution</button>
@@ -139,7 +138,7 @@
                 </div>
                 <div class="clip-transcript">
                     <p><i>Savannah:</i> You can see it too?
-                    <br><i>Jim:</i> Yeah. <span class="blank-word" id="blank3" data-solution="Creepy" data-explanation="'Creepy' describes something that causes an unpleasant feeling of fear or unease. Jim is suggesting the man looks unsettling.">_______</span> suit guy. He’s staring at me. </p>
+                    <br><i>Jim:</i> Yeah. <span class="blank-word" id="blank3" data-solution="Creepy" data-explanation="'Creepy'는 불쾌한 두려움이나 불안감을 유발하는 것을 묘사합니다. Jim은 그 남자가 불안하게 보인다고 말하고 있습니다.">_______</span> suit guy. He’s staring at me. </p>
                     <div class="controls-and-feedback"> <button class="hint-button" data-blank-id="blank3" data-solution="Creepy">Hint</button>
                         <button class="solution-button" data-blank-id="blank3" data-solution="Creepy">Solution</button>
                         <div class="feedback-box"></div>
@@ -154,7 +153,7 @@
                     </video>
                 </div>
                 <div class="clip-transcript">
-                    <p><i>Savannah</i>: Dad, what the hell was that? What's <span class="blank-word" id="blank4" data-solution="going on" data-explanation="'What\'s going on?' is a common informal way to ask what is happening or what the situation is. Savannah is asking for an explanation for the strange events.">_______</span>?</p>
+                    <p><i>Savannah</i>: Dad, what the hell was that? What's <span class="blank-word" id="blank4" data-solution="going on" data-explanation="'What\'s going on?'은 무슨 일이 일어나고 있는지 또는 상황이 어떤지 묻는 흔한 비격식 표현입니다. Savannah는 이상한 사건에 대한 설명을 요구하고 있습니다.">_______</span>?</p>
                     <div class="controls-and-feedback"> <button class="hint-button" data-blank-id="blank4" data-solution="going on">Hint</button>
                         <button class="solution-button" data-blank-id="blank4" data-solution="going on">Solution</button>
                         <div class="feedback-box"></div>
@@ -216,7 +215,7 @@
 
         <div id="mistakes" class="section">
             <h2>Find the Mistakes</h2>
-            <div class="instruction-box"><i class="fas fa-lightbulb icon"></i>There are five mistakes in the writing below. Can you find them all?</div>
+            <div class="instruction-box"><i class="fas fa-lightbulb icon"></i>아래 글에는 다섯 가지 실수가 있습니다. 모두 찾을 수 있나요?</div>
             <p id="mistakes-text-content">
             The movie opens with a scene of a girl, Savannah, washing her hair. Her brother shouts at her from outside and they argue about who should do the chores. He opens her bedroom door and jokingly insults her. She responds by slamming the door and telling him to go away. She walks over to the window and looks out into the garden. There, she sees a creepy looking man standing behind a tree. The man's face is covered by a mask and he is wearing a black and white suit with a torn jacket. Right after seeing him, her phone rings and she answers it. It's her father calling. She tells him about the weird looking man. The father tells her not to look away from the man and that he will be home soon. Her brother knocks on the door and opens it. She tells him to lock all the doors in the house, but before doing that, he looks outside and sees the man in the suit. She explains to Jim that he must keep looking at the man, and says that she is going to lock the doors. She thinks that if one person looks at it, it will be good enough. But after locking the doors, she can't see the man anymore, even though Jim can. Suddenly she sees the creepy man sitting in her room. Savannah covers the man's nose with tape, thinking that that would protect her, but when she looks away, it attacks her. Jim jumps in to defend her. After a short fight, they can both see the man in the room, so he stops moving. The children's father runs into the room. He picks up a mirror and holds it in front of the man's face. When the man looks into the mirror, he is sucked into it. The father then smashes the mirror. Savannah demands an explanation for what has happened. Her father explains that the man has been following him and his wife for a long time. Suddenly, Jim realizes that he can't see the man that he was looking at outside. The father tells them that the creepy man had been able to make a copy of himself. When the doorbell rings, they realize that the danger is not over. The movie ends with the creepy looking man standing in the house. </p>
             <button class="check-answers-button">Check answers</button>
@@ -224,7 +223,7 @@
 
         <div id="vocabulary" class="section">
             <h2>Vocabulary</h2>
-            <div class="instruction-box"><i class="fas fa-lightbulb icon"></i>Drag the correct word to each blank.</div>
+            <div class="instruction-box"><i class="fas fa-lightbulb icon"></i>빈칸에 알맞은 단어를 끌어다 놓으세요.</div>
             <div class="draggable-words" id="draggable-words">
             </div>
             <ol id="vocabulary-sentences">
@@ -236,7 +235,7 @@
 
         <div id="real-talk" class="section">
             <h2>Real Talk</h2>
-            <div class="instruction-box"><i class="fas fa-lightbulb icon"></i>Here you will find some language that can often be heard in real life, but isn't usually found in textbooks.</div>
+            <div class="instruction-box"><i class="fas fa-lightbulb icon"></i>여기서는 실제 생활에서 자주 들을 수 있지만 교과서에는 잘 나오지 않는 언어를 다룹니다.</div>
             <div class="real-talk-clip">
                 <div class="clip-video">
                     <video id="tip1-video" controls>
@@ -246,7 +245,7 @@
                 </div>
                 <div class="clip-text">
                     <h3>Cos</h3>
-                    <p>"Cos" is a very common informal contraction of "because." You'll hear native speakers use it all the time in casual conversation. For example, "I'm tired, cos I stayed up late." It is sometimes spelt "cuz".</p>
+                    <p>"Cos"는 "because"의 매우 흔한 비격식적인 축약형입니다. 캐주얼한 대화에서 원어민들이 항상 사용하는 것을 들을 수 있습니다. 예를 들어, "I'm tired, cos I stayed up late." (늦게까지 안 자서 피곤해.)라고 쓸 수 있습니다. 가끔 "cuz"라고 표기되기도 합니다.</p>
                 </div>
             </div>
 
@@ -259,7 +258,7 @@
                 </div>
                 <div class="clip-text">
                     <h3>Like</h3>
-                    <p>The word "like" is often used as a filler word, similar to "um" or "uh". In this clip, we hear Savannah use it several times in a single sentence.</p>
+                    <p>"like"라는 단어는 "um"이나 "uh"와 같이 군말(filler word)로 자주 사용됩니다. 이 클립에서 Savannah는 한 문장에서 이 단어를 여러 번 사용합니다.</p>
                 </div>
             </div>
 
@@ -272,21 +271,21 @@
                 </div>
                 <div class="clip-text">
                     <h3>Bitch</h3>
-                    <p>This word is used in many ways. Most of them are not polite. In particular, when said to a woman, it can be considered a very strong insult, so avoid this word unless you know what you are doing. Even though Savannah knows that her brother is just joking, her reaction shows that she is not impressed.</p>
+                    <p>이 단어는 여러 가지 방식으로 사용됩니다. 대부분은 무례한 표현입니다. 특히 여성에게 이 단어를 사용할 경우, 매우 강한 모욕으로 간주될 수 있으므로, 어떤 의도로 사용되는지 정확히 알지 못한다면 이 단어를 사용하지 마세요. Savannah는 오빠가 그저 장난치는 것을 알지만, 그녀의 반응은 기분이 좋지 않음을 보여줍니다.</p>
                 </div>
             </div>
         </div>
 
         <div id="speaking" class="section">
             <h2>Speaking Activities</h2>
-            <p>Are you interested in some group speaking activities? <a href="contact.html">Contact us</a> to find out more about how you can talk about this film with a class and a teacher!</p>
+            <p>단체 스피킹 활동에 관심이 있으신가요? 선생님과 함께 수업에서 이 영화에 대해 이야기할 수 있는 방법에 대해 더 알아보려면 <a href="index.html#contact">문의하기</a>를 통해 연락해주세요!</p>
         </div>
 
         <nav class="page-navigation">
             <a href="crow.html">
                 <button>← Previous</button>
             </a>
-            <a href="index.html" class="home-button-container">
+            <a href="index.html">
                 <button>Home</button>
             </a>
             <a href="next-page.html">
@@ -294,9 +293,9 @@
             </a>
         </nav>
     </div>
-    <footer>
-        <div id="footer-placeholder"></div>
-    </footer>
+
+    <div id="footer-placeholder" class="loaded"></div>
+
     <script src="script.js"></script>
     <script src="script-movies.js"></script>
     <script>

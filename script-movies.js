@@ -94,7 +94,7 @@ const pageManager = (function() {
         _mistakesToHighlight = data.mistakesToHighlight || {};
         _vocabularyDragWords = data.vocabularyDragWords || [];
         _vocabularySentences = data.vocabularySentences || [];
-        // Change data.displayNavigationButtons in the line below to make section buttons appear/disappear.
+        // Change data.displayNavigationButtons in the line below to make section buttons appear/disappear. (Change "true" to "false")
         _displayNavigationButtons = data.displayNavigationButtons !== undefined ? data.displayNavigationButtons : true;
 
         // Load common elements (header, footer)

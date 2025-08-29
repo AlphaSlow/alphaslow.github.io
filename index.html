@@ -1,504 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE ahtml>
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="English lessons, online English courses, experienced teachers, fun curriculum, free lessons, English for Children, Adult Conversation, Test Preparation">
-    <meta name="description" content="Learn English with experienced teachers through our fun and effective online programs. We offer courses for all ages and levels, including free lessons.">
-    <title>Modern English Academy</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==x" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="keywords" content="영어 수업, 온라인 영어 강의, 경험 많은 선생님, 재미있는 커리큘럼, 무료 수업, 어린이 영어, 성인 회화, 시험 준비">
+    <meta name="description" content="경험 많은 선생님들과 함께 재미있고 효과적인 온라인 영어 프로그램을 통해 영어를 배우세요. 모든 연령과 레벨을 위한 무료 수업을 포함한 다양한 강의를 제공합니다.">
+    <title>모던 잉글리시 아카데미</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Additional custom styles for the new index.html */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6;
-            color: #333;
-            /* Left-align all text by default */
-            text-align: left;
-        }
 
-        /* Hero Section with a breakfast image */
-        .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/breakfast.png');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 100px 20px;
-        }
-
-        .hero-section h1 {
-            font-size: 3.5em;
-            margin-bottom: 10px;
-        }
-
-        .hero-section p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-        }
-
-        /* Add vertical space between buttons on small screens */
-        @media (max-width: 767px) {
-            .hero-section .button {
-                margin-bottom: 10px;
-            }
-        }
-
-        .button {
-            display: inline-block;
-            padding: 12px 25px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.1em;
-            transition: background-color 0.3s ease;
-        }
-
-        .button:hover {
-            background-color: #0056b3;
-        }
-
-        .primary-button {
-            background-color: #28a745;
-        }
-
-        .primary-button:hover {
-            background-color: #218838;
-        }
-
-        /* New button style for "Free Practice" */
-        .secondary-button {
-            background-color: #00a896; /* Changed to teal color */
-            color: white; /* Changed to white for better contrast */
-        }
-
-        .secondary-button:hover {
-            background-color: #008f80;
-        }
-
-        .section {
-            padding: 30px 20px 60px 20px; /* Reduced top padding */
-            margin: 0 auto;
-            max-width: 1200px;
-        }
-
-        /* Keep original padding for the About Us section */
-        #about.section {
-            padding-top: 60px;
-        }
-
-        /* Reduce the space above other section headers */
-        .section h2 {
-            margin-top: 20px;
-            margin-bottom: 30px;
-        }
-
-        /* Updated About Us Section styles for better responsiveness */
-        .about-section-wrapper {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/people.jpg') no-repeat center center/cover;
-            color: white;
-            padding: 60px 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        .about-section-wrapper h3,
-        .about-section-wrapper ul {
-            max-width: 600px;
-            color: white;
-            text-align: justify;
-        }
-
-        .benefits-grid {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .benefit-item {
-            text-align: center;
-            padding: 20px;
-            border-radius: 8px;
-            background-color: white;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            flex: 1 1 250px;
-            max-width: 350px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .benefit-item h4, .benefit-item p {
-            color: #333; /* Explicitly set the text color to ensure it's visible */
-        }
-
-        .benefit-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-        }
-
-        .benefit-item i {
-            font-size: 2.5em;
-            color: #007bff;
-            margin-bottom: 10px;
-        }
-
-        .benefit-item h4 {
-            margin: 0 0 5px 0;
-        }
-
-        /* Courses section with rotating carousel */
-        .courses-container {
-            position: relative;
-            overflow: hidden;
-            padding: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .courses-carousel {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            gap: 20px; /* Add a gap between cards */
-        }
-
-        /* Change carousel to vertical stack on small screens */
-        @media (max-width: 768px) {
-            .courses-carousel {
-                flex-direction: column;
-                transform: none !important;
-            }
-            .course-card {
-                min-width: 100%;
-            }
-            .carousel-button {
-                display: none;
-            }
-        }
-
-        .course-card {
-            min-width: calc(33.33% - 13.33px); /* Adjust width for gap */
-            box-sizing: border-box;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .course-card p {
-            text-align: justify;
-        }
-
-        @media (max-width: 768px) {
-            .course-card {
-                min-width: 100%;
-            }
-        }
-
-        .course-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .course-card img {
-            max-width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
-
-        .carousel-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            cursor: pointer;
-            padding: 10px;
-            z-index: 10;
-            font-size: 1.5em;
-            border-radius: 50%;
-            transition: opacity 0.3s ease;
-        }
-
-        .carousel-button.prev {
-            left: 10px;
-        }
-
-        .carousel-button.next {
-            right: 10px;
-        }
-
-        .carousel-button.disabled {
-            opacity: 0.3;
-            cursor: not-allowed;
-        }
-
-        .teachers-grid {
-            display: grid;
-            /* Adjusted minmax to make cards narrower and added a max-width to the grid itself */
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            width: 100%;
-            margin-top: 30px;
-            max-width: 600px; /* New rule to make the grid narrower */
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .teacher-card {
-            text-align: center;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .teacher-card img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #007bff;
-        }
-
-        /* Restructured Contact section for side-by-side layout */
-        .contact-container {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-            align-items: center;
-        }
-
-        .contact-info-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            text-align: left; /* Left-align the content in the contact info box */
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        .contact-item {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start; /* Changed to left-align items */
-            gap: 5px;
-        }
-
-        /* Change contact-item to row on small screens */
-        @media (max-width: 992px) {
-            .contact-item {
-                flex-direction: row;
-                align-items: center;
-                gap: 15px;
-            }
-        }
-
-        /* New styles for the contact images */
-        .contact-item img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .contact-item img:hover {
-            transform: scale(1.1);
-        }
-
-        .contact-item p {
-            margin: 0;
-            font-size: 1.1em;
-        }
-
-        .contact-form {
-            max-width: 600px;
-            width: 100%;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1em;
-        }
-
-        .contact-form textarea {
-            resize: vertical;
-        }
-
-        .contact-form button {
-            /* Adjusted width and padding for a smaller button */
-            width: auto;
-            padding: 12px 25px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1em;
-            cursor: pointer;
-        }
-
-        .contact-form button:hover {
-            background-color: #0056b3;
-        }
-
-        @media (min-width: 992px) {
-            .contact-container {
-                flex-direction: row;
-                justify-content: center;
-                /* Aligned items to the center for vertical centering */
-                align-items: stretch; /* Stretched items to be the same height */
-                gap: 20px; /* Added gap between boxes */
-            }
-
-            .contact-info-wrapper {
-                flex: 0 1 auto; /* Flexbox will now fit the content */
-                flex-direction: column;
-                justify-content: center; /* Vertically centered items within the box */
-                text-align: left;
-                gap: 40px; /* Added more space between items */
-                padding: 20px 30px; /* Reduced top/bottom padding to tighten the box */
-            }
-
-            .contact-form {
-                flex: 1; /* Made the right box take up the remaining space */
-                max-width: none;
-            }
-
-            .contact-item {
-                flex-direction: row;
-                align-items: center;
-                gap: 15px;
-            }
-        }
-
-        /* New styles for the book carousel */
-        .book-viewer {
-            position: relative;
-            width: 100%;
-            max-width: 750px; /* Reduced max-width for smaller images */
-            height: auto;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            border-radius: 10px;
-            overflow: hidden;
-            margin: 0 auto; /* Center the viewer */
-        }
-
-        .book-carousel {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .book-page {
-            min-width: 50%; /* Show 2 images at a time */
-            box-sizing: border-box;
-            padding: 5px; /* Add small padding to bring images closer */
-        }
-
-        .book-page img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 8px;
-        }
-
-        .sample-lesson-section {
-            display: flex;
-            flex-direction: column;
-            /* Increased gap for more space below the carousel */
-            gap: 40px;
-            align-items: center;
-        }
-
-        .sample-lesson-buttons {
-            display: flex;
-            gap: 10px;
-            margin-top: 20px;
-        }
-
-        /* Re-center elements that need to be centered after global left alignment */
-        .hero-section, .hero-section h1, .hero-section p, .section h2, .contact-container, .contact-form {
-            text-align: center;
-        }
-
-        /* Override specific text alignment for the body and list items */
-        body {
-            text-align: left;
-        }
-        .teacher-card ul {
-            text-align: left;
-        }
-        .benefit-item p {
-            text-align: left;
-        }
-    </style>
 </head>
 <body>
-    <header id="header-placeholder"></header>
+    <div id="header-placeholder" class="loaded"></div>
 
     <main>
-        <!-- Section 1: Hero Section -->
         <section class="hero-section">
             <div class="hero-content">
-                <h1>Unlock Your English Potential</h1>
-                <p>Interactive and fun online English lessons with experienced teachers. Free online practice activities.</p>
-                <!-- Added a new button for "Free Practice" -->
-                <a href="#courses" class="button">Explore Courses</a>
-                <a href="movies1.html" class="button secondary-button">Free Practice</a>
-                <a href="#contact" class="button primary-button">Contact Us</a>
+                <h1>당신의 영어 잠재력을 깨우세요</h1>
+                <p>경험 많은 선생님과 함께하는 재미있고 상호작용적인 온라인 영어 수업. 무료 온라인 연습 활동도 제공합니다.</p>
+                <a href="#courses" class="button">강좌 둘러보기</a>
+                <a href="movies1.html" class="button secondary-button">무료 연습</a>
+                <a href="#contact" class="button primary-button">문의하기</a>
             </div>
         </section>
 
-        <!-- Section 2: About Us -->
         <section id="about" class="section">
-            <h2 style="text-align: center; margin-bottom: 50px;">About Us</h2>
+            <h2 style="text-align: center; margin-bottom: 50px;">우리의 접근 방식에 대해</h2>
             <div class="about-section-wrapper">
-                <h3>Our Mission</h3>
+                <h3>우리의 사명</h3>
+                <p>모던 잉글리시 아카데미는 혁신적이고 개인화된 학습을 통해 학생들이 유창성을 달성하도록 돕는 데 전념하고 있습니다. 우리는 현대적인 교수법과 재미있고 상호작용적인 커리큘럼을 결합하여 영어를 배우는 것을 모두에게 즐거운 경험으로 만듭니다.</p>
                 <ul>
-                    <li>Make the language learning journey feel fun and rewarding</li>
-                    <li>Help learners discover more effective ways to learn </li>
-                    <li>Inspire learners to develop on their own</li>
+                    <li>언어 학습의 여정을 재미있고 보람 있게 만들기</li>
+                    <li>학습자들이 더 효과적인 학습 방법을 찾도록 돕기</li>
+                    <li>학습자들이 스스로 발전하도록 격려하기</li>
                 </ul>
-                <!-- Removed the benefits-overlay div to simplify the layout -->
                 <div class="benefits-grid">
                     <div class="benefit-item">
                         <i class="fas fa-chalkboard-teacher"></i>
-                        <h4>Experienced Teachers</h4>
-                        <p>Our teachers have many years of experience with all kinds of students.</p>
+                        <h4>경험 많은 선생님들</h4>
+                        <p>저희 선생님들은 다양한 학생들과 수년간 경험을 쌓았습니다.</p>
                     </div>
                     <div class="benefit-item">
                         <i class="fas fa-book-open"></i>
-                        <h4>Fun Curriculum</h4>
-                        <p>We use real world materials, such as movies and books, so that students are exposed to real language.</p>
+                        <h4>재미있는 커리큘럼</h4>
+                        <p>영화나 책 같은 실제 자료를 사용하여 학생들이 실제 언어에 노출되도록 합니다.</p>
                     </div>
                     <div class="benefit-item">
                         <i class="fas fa-laptop-code"></i>
-                        <h4>Comfortable Environment</h4>
-                        <p>Even in an online group, everyone can speak comfortably.</p>
+                        <h4>편안한 환경</h4>
+                        <p>온라인 그룹에서도 모두가 편안하게 이야기할 수 있습니다.</p>
                     </div>
                 </div>
             </div>
@@ -506,37 +56,34 @@
 
         <hr>
 
-        <!-- Section 3: Our Online Courses (with horizontal tabs) -->
         <section id="courses" class="section">
-            <h2 style="text-align: center;">Our Online Courses</h2>
-            <!-- <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">While our online classes focus on adult conversation, we can create a program for almost anything you need. See some examples below.</p> -->
+            <h2 style="text-align: center;">온라인 강좌</h2>
             <div class="courses-container">
                 <div class="courses-carousel" id="coursesCarousel">
-                    <!-- Original cards - no clones -->
                     <div class="course-card">
                         <img src="images/adult conversation.png" alt="People having an adult conversation">
-                        <h3>Adult Conversation</h3>
-                        <p>Improve your fluency and confidence with real-world conversation practice. We keep students active and make sure the topics are varied and interesting.</p>
+                        <h3>성인 회화</h3>
+                        <p>실생활 회화 연습으로 유창성과 자신감을 향상시키세요. 학생들이 활발하게 참여하고 다양하고 흥미로운 주제를 다룹니다.</p>
                     </div>
                     <div class="course-card">
                         <img src="images/Young girl Zoom.png" alt="Children learning with a teacher">
-                        <h3>English for Children</h3>
-                        <p>Our fun and interactive curriculum helps children of all ages build a strong foundation in English through games, stories, and songs.</p>
+                        <h3>어린이 영어</h3>
+                        <p>재미있고 상호작용적인 커리큘럼을 통해 게임, 이야기, 노래를 통해 모든 연령의 어린이가 영어의 튼튼한 기초를 다질 수 있도록 돕습니다.</p>
                     </div>
                     <div class="course-card">
                         <img src="images/English test.png" alt="Student preparing for a test">
-                        <h3>Test Preparation</h3>
-                        <p>Get ready for exams like TOEIC Speaking, TOEFL, or OPIC with our expert-led test prep courses. Learn strategies and practice with authentic materials.</p>
+                        <h3>시험 준비</h3>
+                        <p>저희 전문가가 이끄는 시험 대비 과정을 통해 TOEIC Speaking, TOEFL, OPIC 같은 시험을 준비하세요. 전략을 배우고 실제 자료로 연습합니다.</p>
                     </div>
                     <div class="course-card">
                         <img src="images/business meeting.png" alt="A business person talking on a video call">
-                        <h3>Business English</h3>
-                        <p>Master the language of the workplace. Learn from someone who has experienced the business world.</p>
+                        <h3>비즈니스 영어</h3>
+                        <p>직장에서 성공하는 데 필요한 어휘와 의사소통 능력을 익히세요. 비즈니스 세계를 경험한 분께 배우세요.</p>
                     </div>
                     <div class="course-card">
                         <img src="images/face-to-face.png" alt="Students in a face-to-face lesson">
-                        <h3>Face-to-face lessons</h3>
-                        <p>Students in Pohang can experience personalized learning. We have students of all ages.</p>
+                        <h3>오프라인 수업</h3>
+                        <p>포항에 있는 학생들은 개인 맞춤형 학습을 경험할 수 있습니다. 우리는 모든 연령대의 학생들을 가르칩니다.</p>
                     </div>
                 </div>
                 <button class="carousel-button prev" id="prev-course-btn">&#10094;</button>
@@ -546,13 +93,11 @@
 
         <hr>
 
-        <!-- Section 4: Sample Lesson - UPDATED -->
         <section id="sample-lesson" class="section">
-            <h2 style="text-align: center;">Sample Lesson</h2>
+            <h2 style="text-align: center;">샘플 강의</h2>
             <div class="sample-lesson-section">
                 <div class="book-viewer">
                     <div class="book-carousel" id="bookCarousel">
-                        <!-- Book pages as large images -->
                         <div class="book-page">
                             <img src="images/sample1.png" alt="Sample lesson page 1">
                         </div>
@@ -572,44 +117,41 @@
                             <img src="images/sample6.png" alt="Sample lesson page 6">
                         </div>
                     </div>
-                    <!-- Carousel buttons, similar to the courses section -->
                     <button class="carousel-button prev" id="prev-book-btn">&#10094;</button>
                     <button class="carousel-button next" id="next-book-btn">&#10095;</button>
                 </div>
-                <p class="sample-lesson-description">Online lessons are done in groups, if possible. This gives students access to different people and a wider range of activities. Students are encouraged to talk often, rather than just listening to a teacher. There are a variety of different activities, with a structured approach. This gives everyone a chance to speak, including those who often feel shy. Students usually find this more interesting and useful than traditional study.
-                <br><br>The lesson above is based on the short film "Timepiece". Students who sign up for the movie-based conversation course will receive a book with lessons like this one. Students will watch the movie at home and try to understand it. People who want extra practice can do the online activities before meeting with other students on Zoom. Take a look at the free online activities or contact us if you want more information about the lessons.</p>
-                <!-- Added buttons at the bottom of the section -->
+                <p class="sample-lesson-description">온라인 수업은 가능한 한 그룹으로 진행됩니다. 이렇게 하면 학생들은 다양한 사람들과 더 넓은 범위의 활동에 참여할 수 있습니다. 학생들은 단순히 선생님의 말을 듣는 것이 아니라 자주 이야기하도록 권장됩니다. 다양한 활동이 구조화된 방식으로 제공됩니다. 이는 종종 수줍음을 타는 사람들을 포함하여 모두에게 말할 기회를 제공합니다. 학생들은 보통 이것이 전통적인 학습보다 더 흥미롭고 유용하다고 생각합니다.
+                <br><br>위의 수업은 단편 영화 "Timepiece"를 기반으로 합니다. 영화 기반 회화 강좌에 등록한 학생들은 이와 같은 수업이 담긴 책을 받게 됩니다. 학생들은 집에서 영화를 보고 이해하려고 노력할 것입니다. 추가 연습을 원하는 사람들은 Zoom에서 다른 학생들과 만나기 전에 온라인 활동을 할 수 있습니다. 무료 온라인 활동을 살펴보거나 수업에 대해 더 알고 싶으시면 문의해 주세요.</p>
                 <div class="sample-lesson-buttons">
-                    <a href="movies1.html" class="button secondary-button">Free Practice</a>
-                    <a href="#contact" class="button primary-button">Contact Us</a>
+                    <a href="movies1.html" class="button secondary-button">무료 연습</a>
+                    <a href="#contact" class="button primary-button">문의하기</a>
                 </div>
             </div>
         </section>
 
         <hr>
 
-        <!-- Section 5: Meet Our Teachers -->
         <section id="teachers" class="section">
-            <h2 style="text-align: center;">Meet Our Teachers</h2>
+            <h2 style="text-align: center;">선생님들을 만나보세요</h2>
             <div class="teachers-grid">
                 <div class="teacher-card">
-                    <img src="https://images.unsplash.com/photo-1627161674488-842234027734?q=80&w=1740&auto=format&fit-crop" alt="Portrait of teacher Ben">
+                    <img src="images/Ben.png" alt="Portrait of teacher Ben">
                     <h3>Ben</h3>
                     <ul>
                         <li>MBA, MSc (Eng)</li>
-                        <li>Native English speaker</li>
-                        <li>14 years experience (university, public schools, corporate)
-                        <li>Currently learning his fifth language</li>
+                        <li>원어민 영어 사용자</li>
+                        <li>14년 경력 (대학교, 공립학교, 기업)</li>
+                        <li>현재 다섯 번째 언어 학습 중</li>
                     </ul>
                 </div>
                 <div class="teacher-card">
-                    <img src="https://images.unsplash.com/photo-1582216259062-8149e8a01f5c?q=80&w=1740&auto=format&fit-crop" alt="Portrait of teacher Lisa">
+                    <img src="images/Lisa.png" alt="Portrait of teacher Lisa">
                     <h3>Lisa</h3>
                     <ul>
-                        <li>Qualified teacher</li>
-                        <li>Fluent English speaker</li>
-                        <li>20 years experience (public school, private teaching)</li>
-                        <li>Loves people of all ages</li>
+                        <li>자격 있는 교사</li>
+                        <li>유창한 영어 사용자</li>
+                        <li>20년 경력 (공립학교, 개인 교습)</li>
+                        <li>모든 연령대의 사람들을 사랑합니다</li>
                     </ul>
                 </div>
             </div>
@@ -618,10 +160,8 @@
 
         <hr>
 
-        <!-- Section 6: Contact Us -->
         <section id="contact" class="section">
-            <h2 style="text-align: center;">Contact Us</h2>
-            <!-- <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Have questions about our programs or want to book a free lesson? Fill out the form below and we'll get back to you shortly!</p> -->
+            <h2 style="text-align: center;">문의하기</h2>
             <div class="contact-container">
                 <div class="contact-info-wrapper">
                     <div class="contact-item">
@@ -644,101 +184,18 @@
                     </div>
                 </div>
                 <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea rows="5" placeholder="Your Message" required></textarea>
-                    <button type="submit">Send Message</button>
+                    <input type="text" placeholder="이름" required>
+                    <input type="email" placeholder="이메일" required>
+                    <textarea rows="5" placeholder="메시지" required></textarea>
+                    <button type="submit">메시지 보내기</button>
                 </form>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div id="footer-placeholder"></div>
-    </footer>
+    <div id="footer-placeholder" class="loaded"></div>
 
-    <script>
-        // JavaScript for the Courses carousel
-        const coursesCarousel = document.getElementById('coursesCarousel');
-        const prevCourseBtn = document.getElementById('prev-course-btn');
-        const nextCourseBtn = document.getElementById('next-course-btn');
+    <script src="script.js"></script>
 
-        const totalCards = coursesCarousel.children.length;
-        const visibleCards = 3;
-        let currentIndex = 0;
-
-        // Function to update the carousel position
-        const updateCarousel = () => {
-            const cardWidthWithGap = coursesCarousel.children[0].offsetWidth + 20;
-            const offset = -currentIndex * cardWidthWithGap;
-            coursesCarousel.style.transform = `translateX(${offset}px)`;
-            updateButtons();
-        };
-
-        // Function to handle button enabling/disabling
-        const updateButtons = () => {
-            prevCourseBtn.disabled = (currentIndex === 0);
-            nextCourseBtn.disabled = (currentIndex >= totalCards - visibleCards);
-        };
-
-        // Event listeners for carousel buttons
-        nextCourseBtn.addEventListener('click', () => {
-            if (currentIndex < totalCards - visibleCards) {
-                currentIndex++;
-                updateCarousel();
-            }
-        });
-
-        prevCourseBtn.addEventListener('click', () => {
-            if (currentIndex > 0) {
-                currentIndex--;
-                updateCarousel();
-            }
-        });
-
-        // JavaScript for the Sample Lesson book viewer carousel
-        const bookCarousel = document.getElementById('bookCarousel');
-        const prevBookBtn = document.getElementById('prev-book-btn');
-        const nextBookBtn = document.getElementById('next-book-btn');
-        const totalBookPages = bookCarousel.children.length;
-        const visibleBookPages = 2; // Show 2 pictures at a time
-        let currentBookIndex = 0;
-
-        // Function to update the book carousel position
-        const updateBookCarousel = () => {
-            const pageWidthWithGap = bookCarousel.children[0].offsetWidth;
-            const offset = -currentBookIndex * pageWidthWithGap;
-            bookCarousel.style.transform = `translateX(${offset}px)`;
-            updateBookButtons();
-        };
-
-        // Function to handle book carousel button enabling/disabling
-        const updateBookButtons = () => {
-            prevBookBtn.disabled = (currentBookIndex === 0);
-            nextBookBtn.disabled = (currentBookIndex >= totalBookPages - visibleBookPages);
-        };
-
-        // Event listeners for book carousel buttons
-        nextBookBtn.addEventListener('click', () => {
-            if (currentBookIndex < totalBookPages - visibleBookPages) {
-                currentBookIndex += visibleBookPages; // Jump 2 pictures
-                updateBookCarousel();
-            }
-        });
-
-        prevBookBtn.addEventListener('click', () => {
-            if (currentBookIndex > 0) {
-                currentBookIndex -= visibleBookPages; // Jump back 2 pictures
-                if (currentBookIndex < 0) {
-                    currentBookIndex = 0;
-                }
-                updateBookCarousel();
-            }
-        });
-
-        // Initialize the carousels
-        updateCarousel();
-        updateBookCarousel();
-    </script>
 </body>
 </html>

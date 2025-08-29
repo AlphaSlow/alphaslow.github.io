@@ -70,6 +70,7 @@
     border: 1px solid #ddd;
     margin-bottom: 20px;
     background-color: #f9f9f9;
+    text-align: left;
 }
 
 /* Adjustment to move text closer to the top for sections */
@@ -452,4 +453,10 @@
 
 .page-navigation button:hover {
     background-color: #555;
+}
+
+/* The text that says "You got x/5 correct." */
+#answer-feedback, #vocabulary-feedback {
+    margin-top: 10px;
+    transition: opacity 1s ease-in-out;
 }
