@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="English practice, movie English, ESL, EFL, listening practice, vocabulary, comprehension, intermediate English, Tears of Steel, online English lessons">
+    <meta name="description" content="Improve your English with interactive listening, comprehension, and vocabulary activities based on the short film 'Tears of Steel.' Perfect for intermediate English learners.">
+    <title>Tears of Steel - English Practice With Short Films</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style-movies.css">
+    <script>
+        // Make sure all necessary data is uncommented and complete here!
+        const pageData = {
+            mainVideoSrc: "https://www.youtube.com/embed/R6MlUcmOul8",
+            listeningBlanks: [
+                {
+                    id: 'blank1',
+                    solution: 'admit',
+                    explanation: 'To <q>admit</q> is to acknowledge that something is true.',
+                    videoSrc: 'clips/tos/tos listening 1.mp4',
+                    transcript: '<i>Celia</i>: Why don&#39t you just <span class="blank-word"></span> that you&#39re freaked out by my robot hand?'
+                },
+
+                {
+                    id: 'blank2',
+                    solution: 'Whatever',
+                    explanation: "This is a way to tell someone that you don't believe or don't care about what they are saying.",
+                    videoSrc: 'clips/tos/tos listening 2.mp4',
+                    transcript: '<i>Thom</i>:  Alright, fine. I&#39m freaked out! I&#39m having nightmares that I&#39m being chased by these gigantic robotic claws of death...<br><i>Celia</i>: Oh, <span class="blank-word">_______</span>, Thom! We&#39re done!'
+                },
+                {
+                    id: 'blank3',
+                    solution: 'left',
+                    explanation: 'This word has the same meaning as <q>remaining</q> but is much more common in conversation.',
+                    videoSrc: 'clips/tos/tos listening 3.mp4',
+                    transcript: '<i>Barley</i>: Ok, they&#39re coming. Two minutes <span class="blank-word">_______</span>! Two minutes!'
+                },
+                {
+                    id: 'blank4',
+                    solution: 'fault',
+                    explanation: "<q>It's your fault</q>, <q>It wasn't his fault</q>: common ways of saying who is or isn't responsible for a problem.",
+                    videoSrc: 'clips/tos/tos listening 4.mp4',
+                    transcript: '<i>Technician</i>: Not my <span class="blank-word">____________</span>! This time.'
+                }
+                // ... add more listening blanks as needed
+            ],
+            comprehensionAnswers: {
+                q1: "a", q2: "b", q3: "c", q4: "d", q5: "a"
+            },
+            mistakesToHighlight: [
+                'at the beach', 'some stairs', 'days', 'bird', 'fighting'
+            ],
+            vocabularyDragWords: ['broke up', 'modify', 'script', 'weapons', 'get over'],
+            vocabularySentences: [
+                { text: "One of the reasons why Thom and Celia ____ is that he thought her arm was scary.", correctWord: "broke up" },
+                { text: "The humans' plan was to ____ the memories in Celia's brain.", correctWord: "modify" },
+                { text: "When acting out the memories, Thom was supposed to follow a ____.", correctWord: "script" },
+                { text: "The humans used guns and other ____ to fight the robots.", correctWord: "weapons" },
+                { text: "By giving Celia new memories, they helped Celia ____ her anger.", correctWord: "get over" }
+            ],
+            // displayNavigationButtons: false // Set to false to hide the buttons. No. Find this variable in script-movies.js
+        };
+    </script>
+
+</head>
+<body>
+    <div id="header-placeholder" class="loaded"></div>
+
+    <div class="page-content-wrapper">
+        <h1>Tears of Steel</h1>
+
+        <div class="video-main-container">
+            <iframe id="main-video-iframe" src="https://www.youtube.com/embed/R6MlUcmOul8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="facts-container">
+            <p><strong>Title:</strong> Tears of Steel</p>
+            <p><strong>By:</strong> Blender Studios</p>
+            <p><strong>Genre:</strong> Sci-fi, action</p>
+            <p><strong>Language Difficulty:</strong> Intermediate</p>
+            <p><strong>Story Difficulty:</strong> Difficult</p>
+            <p><strong>Ages:</strong> Teen+ (mild violence and some bad language)</p>
+            <p><strong>Run Time:</strong> 9 minutes 48 seconds</p>
+        </div>
+
+        <!-- These buttons can be hidden in script-movies.js -->
+        <section id="nav-buttons-section" class="nav-sections hidden-by-default">
+            <a href="#listening"><button>Listening</button></a>
+            <a href="#comprehension1"><button>Test Your Understanding</button></a>
+            <a href="#mistakes"><button>Find the Mistakes</button></a>
+            <a href="#vocabulary"><button>Vocabulary</button></a>
+            <a href="#real-talk"><button>Real Talk</button></a>
+            <a href="#speaking"><button>Speaking Activities</button></a>
+        </section>
+
+        <div id="listening" class="section">
+            <h2>Listening</h2>
+        </div>
+
+        <div id="comprehension1" class="section">
+            <h2>Test your understanding</h2>
+            <div class="question">
+                <p>1. What did Thom and Celia do on the bridge?</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="a"> A. They broke up.</label>
+                    <label><input type="radio" name="q1" value="b"> B. They made plans for the weekend.</label>
+                    <label><input type="radio" name="q1" value="c"> C. They talked about designs for a robot.</label>
+                    <label><input type="radio" name="q1" value="d"> D. They planned a trip to space.</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>2. Whose brain did we see?</p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="a"> A. Thom's</label>
+                    <label><input type="radio" name="q2" value="b"> B. Celia's</label>
+                    <label><input type="radio" name="q2" value="c"> C. A stranger's</label>
+                    <label><input type="radio" name="q2" value="d"> D. It's impossible to know.</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>3. Why did Barley warn that there were "2 minutes left"?</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="a"> A. He was going to stop working soon.</label>
+                    <label><input type="radio" name="q3" value="b"> B. He knew that Thom couldn't act well.</label>
+                    <label><input type="radio" name="q3" value="c"> C. There were robots coming.</label>
+                    <label><input type="radio" name="q3" value="d"> D. The weather was getting bad.</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>4. While trying to overwrite the memory in the brain, what problem did the people NOT have?</p>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="a"> A. The building was attacked by robots.</label>
+                    <label><input type="radio" name="q4" value="b"> B. Celia did not believe Thom.</label>
+                    <label><input type="radio" name="q4" value="c"> C. Their machine had an error.</label>
+                    <label><input type="radio" name="q4" value="d"> D. There was an earthquake.</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>5. How did changing Celia's memory help stop the robot attack?</p>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="a"> A. She learned to change and forgive.</label>
+                    <label><input type="radio" name="q5" value="b"> B. She forgot how to control robots.</label>
+                    <label><input type="radio" name="q5" value="c"> C. She just wanted to go to space.</label>
+                    <label><input type="radio" name="q5" value="d"> D. It helped her to think more quickly.</label>
+                </div>
+            </div>
+            <button class="check-answers-button">Check Answers</button>
+            <button class="reset-button">Reset</button>
+            <div id="answer-feedback"></div>
+        </div>
+
+        <div id="mistakes" class="section">
+            <h2>Find the Mistakes</h2>
+            <div class="instruction-box"><i class="fas fa-lightbulb icon"></i>There are five mistakes in the writing below. Can you find them all?</div>
+            <p id="mistakes-text-content">
+            This is a story of humans trying to prevent destruction by robots. It starts with a scene of two young adults, Thom and Celia, standing outside at the beach. It's clear that they are a couple that is breaking up because they have different interests - space travel and robotics - and also because Thom has trouble accepting Celia's robot arm. The movie then cuts to an futuristic scene of some scientists doing something with a brain. Outside, we see an armed guard (Barley) monitoring for danger. Next to him, an old man wakes up and goes down some stairs into a building. There, we see a giant robot. The scientists start a machine and a hologram appears, creating the scene of the breakup that we saw at the beginning of the movie. The old man enters the hologram, and his appearance changes into that of Thom, his younger self. We see him reenact the breakup scene with the giant robot, but he is unable to do it convincingly. While this is happening, the scientists try to overwrite the memories in the brain that they had been working with. But things start going wrong. Barley warns that there is danger coming in 2 days. There is some kind of technology failure. And the robot, which now looks like Celia, is furious with Thom and threatening violence. Just then, Thom starts to change the script and explain his real feelings. Just then, robots arrive and start attacking, while several of the people try frantically to fight them off. In the hologram, we see Celia start to be convinced by Thom's performance and the memory overwrite of the brain is completed. As a robot damages the machinery, the hologram breaks and we see Thom and Celia in their current forms: an old man and a giant bird. We learn that the brain was actually Celia's and it becomes clear that she was controlling the robot army. By overwriting her memories, the humans have been able to change her attitude. At the end of the movie, we see Thom and Celia fighting while robots move around the facility. The robots do not seem to be attacking humans, suggesting that the mission to stop them has been a success.
+            </p>
+            <button class="check-answers-button">Check answers</button>
+        </div>
+
+        <div id="vocabulary" class="section">
+            <h2>Vocabulary</h2>
+            <div class="instruction-box"><i class="fas fa-lightbulb icon"></i>Drag the correct word to each blank.</div>
+            <div class="draggable-words" id="draggable-words">
+            </div>
+            <ol id="vocabulary-sentences">
+            </ol>
+            <button class="check-answers-button">Check answers</button>
+            <button class="reset-button">Reset</button>
+            <div id="vocabulary-feedback"></div>
+        </div>
+
+        <div id="real-talk" class="section">
+            <h2>Real Talk</h2>
+            <div class="instruction-box"><i class="fas fa-lightbulb icon"></i>Here you will find some language that can often be heard in real life, but isn't usually found in textbooks.</div>
+
+            <div class="real-talk-clip">
+                <div class="clip-video">
+                    <video id="tip1-video" controls>
+                        <source src="clips/tos/tos jerk.mp4" type="video/mp4">
+                        Your browser can not play this video.
+                    </video>
+                </div>
+                <div class="clip-text">
+                    <h3>Jerk</h3>
+                    <p>"Jerk" is an insult used in American English. It is not very strong and is often used by children, especially when referring to a male.</p>
+                </div>
+            </div>
+
+            <div class="real-talk-clip">
+                <div class="clip-video">
+                    <video id="tip2-video" controls>
+                        <source src="clips/tos/tos awesome.mp4" type="video/mp4">
+                        Your browser can not play this video.
+                    </video>
+                </div>
+                <div class="clip-text">
+                    <h3>Awesome</h3>
+                    <p>This is a very common word that has the same meaning as "amazing". Thom says that he wants to do good things in space (and probably look good too!).</p>
+                </div>
+            </div>
+
+            <div class="real-talk-clip">
+                <div class="clip-video">
+                    <video id="tip3-video" controls>
+                        <source src="clips/tos/tos freaky.mp4" type="video/mp4">
+                        Your browser can not play this video.
+                    </video>
+                </div>
+                <div class="clip-text">
+                    <h3>Freaky</h3>
+                    <p>The word "freaky" describes something that makes someone feel uncomfortable because it is strange, and probably a little scary too.</p>
+                </div>
+            </div>
+
+            <div class="real-talk-clip">
+                <div class="clip-video">
+                    <video id="tip4-video" controls>
+                        <source src="clips/tos/tos asses.mp4" type="video/mp4">
+                        Your browser can not play this video.
+                    </video>
+                </div>
+                <div class="clip-text">
+                    <h3>Move your ass(es)</h3>
+                    <p>The word "ass" is a slightly more adult version of the word "butt"/"bum". But it is often used in sentences where it does not have this meaning. In this sentence, the director is just saying "Move" or "Hurry Up". Similar expressions include "Kick your ass" and "Beat your ass", both of which are not related to a butt.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="speaking" class="section">
+            <h2>Speaking Activities</h2>
+            <p>Are you interested in some group speaking activities? <a href="/index.html#contact">Contact us</a> to find out more about how you can talk about this film with a class and a teacher!</p>
+        </div>
+
+        <nav class="page-navigation">
+            <a href="crow.html">
+                <button>← Previous</button>
+            </a>
+            <a href="/index.html">
+                <button>Home</button>
+            </a>
+            <a href="next-page.html">
+                <button>Next →</button>
+            </a>
+        </nav>
+    </div>
+
+    <div id="footer-placeholder" class="loaded"></div>
+
+    <script src="/script.js"></script>
+    <script src="script-movies.js"></script>
+    <script>
+        // Initialize the page manager with the data defined above
+        document.addEventListener('DOMContentLoaded', () => {
+            pageManager.init(pageData);
+        });
+    </script>
+</body>
+</html>

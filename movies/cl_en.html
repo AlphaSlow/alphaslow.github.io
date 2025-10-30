@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="English practice, movie English, ESL, EFL, listening practice, vocabulary, comprehension, intermediate English, Cosmos Laundromat, online English lessons, sheep, Victor">
+    <meta name="description" content="Improve your English with interactive listening, comprehension, and vocabulary activities based on the short film 'Cosmos Laundromat.' Perfect for intermediate English learners.">
+    <title>Cosmos Laundromat - English Practice With Short Films</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style-movies.css">
+    <script>
+        // Data for the Cosmos Laundromat page
+        const pageData = {
+            mainVideoSrc: "https://www.youtube.com/embed/Y-rmzh0PI3c",
+            listeningBlanks: [
+                {
+                    id: 'blank1',
+                    solution: 'long way',
+                    explanation: '<q> long way</q> means <q>a long distance</q> or <q>far</q>.',
+                    videoSrc: 'clips/Cosmos Laundromat/CL listening 1.mp4',
+                    transcript: '<i>Victor</i>: I&#39ve come a <span class="blank-word"></span> for you, Franck.'
+                },
+                {
+                    id: 'blank2',
+                    solution: 'ages',
+                    explanation: "<q>Ages</q> is another way of saying <q>a very long time</q>.",
+                    videoSrc: 'clips/Cosmos Laundromat/CL listening 2.mp4',
+                    transcript: '<i>Franck</i>: Well, this, uh, this better be good. It took me <span class="blank-word"></span> to tie that rope.'
+                },
+                {
+                    id: 'blank3',
+                    solution: 'pick you up',
+                    explanation: 'This phrase is commonly used when someone goes to fetch another person to take them somewhere.',
+                    videoSrc: 'clips/Cosmos Laundromat/CL listening 3.mp4',
+                    transcript: '<i>Franck</i>: When can I go? Where can I go? <br><i>Victor</i> We will <span class="blank-word"></span>. Don&#39t worry. Just stay here.'
+                },
+                {
+                    id: 'blank4',
+                    solution: 'whatever',
+                    explanation: 'Here the word <q>whatever</q> shows that Franck doesn&#39t really care what the man&#39s real name is. You could say <q>Let&#39s just go hiking, or whatever</q> to say that you are happy with hiking or any other plan.',
+                    videoSrc: 'clips/Cosmos Laundromat/CL listening 4.mp4',
+                    transcript: '<i>Franck</i>: Hey! Hey! Wait, mister! Uh Casper... Hector... <span class="blank-word"></span>!'
+                }
+            ],
+            comprehensionAnswers: {
+                q1: "a", q2: "c", q3: "b", q4: "d", q5: "b"
+            },
+            mistakesToHighlight: [
+                'tall trees', 'sing when he hears music', 'rap music', 'a monkey', 'goes to bed'
+            ],
+            vocabularyDragWords: ['commit', 'caterpillar', 'washing machine', 'darkened', 'branch'],
+            vocabularySentences: [
+                { text: "Franck was planning to ____ suicide.", correctWord: "commit" },
+                { text: "He tried to push the ____ to the edge of the island.", correctWord: "branch" },
+                { text: "The sky ____ and a colorful vortex appeared.", correctWord: "darkened" },
+                { text: "When Franck woke up in his new body, he looked like a ____.", correctWord: "caterpillar" },
+                { text: "Near the end of the movie, Victor came out of a ____.", correctWord: "washing machine" }
+            ],
+        };
+    </script>
+
+</head>
+<body>
+    <div id="header-placeholder" class="loaded"></div>
+
+    <div class="page-content-wrapper">
+        <h1>Cosmos Laundromat</h1>
+
+        <div class="video-main-container">
+            <iframe id="main-video-iframe" src="https://www.youtube.com/embed/Y-rmzh0PI3c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="facts-container">
+            <p><strong>Title:</strong> Cosmos Laundromat</p>
+            <p><strong>By:</strong> Blender Studios</p>
+            <p><strong>Genre:</strong> Fantasy, drama</p>
+            <p><strong>Language Difficulty:</strong> Intermediate</p>
+            <p><strong>Story Difficulty:</strong> Easy</p>
+            <p><strong>Ages:</strong> Teen+ (some adult themes and mild violence)</p>
+            <p><strong>Run Time:</strong> 11 minutes 51 seconds</p>
+        </div>
+
+        <section id="nav-buttons-section" class="nav-sections hidden-by-default">
+            <a href="#listening"><button>Listening</button></a>
+            <a href="#comprehension1"><button>Test Your Understanding</button></a>
+            <a href="#mistakes"><button>Find the Mistakes</button></a>
+            <a href="#vocabulary"><button>Vocabulary</button></a>
+            <a href="#real-talk"><button>Real Talk</button></a>
+            <a href="#speaking"><button>Speaking Activities</button></a>
+        </section>
+
+        <div id="listening" class="section">
+            <h2>Listening</h2>
+        </div>
+
+        <div id="comprehension1" class="section">
+            <h2>Test your understanding</h2>
+            <div class="question">
+                <p>1. What did Franck try to do at the beginning of the film?</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="a"> A. He tried to end his life.</label>
+                    <label><input type="radio" name="q1" value="b"> B. He decided to go traveling.</label>
+                    <label><input type="radio" name="q1" value="c"> C. He tried to call Victor.</label>
+                    <label><input type="radio" name="q1" value="d"> D. He just tried to keep busy.</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>2. What did Victor put on Franck's neck?</p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="a"> A. a rope.</label>
+                    <label><input type="radio" name="q2" value="b"> B. a necklace.</label>
+                    <label><input type="radio" name="q2" value="c"> C. an electronic device.</label>
+                    <label><input type="radio" name="q2" value="d"> D. a plastic toy.</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>3. What best describes the purpose of Victor's visit to Franck?</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="a"> A. To help someone travel because they were on an island.</label>
+                    <label><input type="radio" name="q3" value="b"> B. To give hope to someone who had given up.</label>
+                    <label><input type="radio" name="q3" value="c"> C. To teach kindness to someone who had forgotten how to help people.</label>
+                    <label><input type="radio" name="q3" value="d"> D. To remind someone how to be brave.</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>4. How did Franck wake up at the end of the movie?</p>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="a"> A. In his own body on his island.</label>
+                    <label><input type="radio" name="q4" value="b"> B. In a new body on his island.</label>
+                    <label><input type="radio" name="q4" value="c"> C. In his own body in a strange new world.</label>
+                    <label><input type="radio" name="q4" value="d"> D. In a new body in a strange new world.</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>5. Where did the final scene of the movie take place?</p>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="a"> A. On the island.</label>
+                    <label><input type="radio" name="q5" value="b"> B. In a laundromat.</label>
+                    <label><input type="radio" name="q5" value="c"> C. On tv.</label>
+                    <label><input type="radio" name="q5" value="d"> D. On a train.</label>
+                </div>
+            </div>
+            <button class="check-answers-button">Check Answers</button>
+            <button class="reset-button">Reset</button>
+            <div id="answer-feedback"></div>
+        </div>
+
+        <div id="mistakes" class="section">
+            <h2>Find the Mistakes</h2>
+            <div class="instruction-box"><i class="fas fa-lightbulb icon"></i>There are five mistakes in the writing below. Can you find them all?</div>
+            <p id="mistakes-text-content">
+            This is the story of the struggles of a depressed sheep named Franck. Franck lives on a flat island that is covered in tall trees. At the start of the movie, we see that he is depressed and trying to commit suicide. He tries to hang himself from a tree, but fails when a branch snaps off. Still tied to the branch, he slowly pushes it towards a cliff at the edge of the island with the intention of throwing himself off. But before he can do so, a man calls to him from behind and introduces himself as Victor. Victor offers positive words, which Franck is not interested in at first. Eventually Franck decides to give Victor a chance and allows him to remove the rope and strap an electronic device to his neck. Victor assures Franck that he has made the right choice and that this device will change his life completely. Franck, still confused, asks what he should do with it, but Victor, who is already leaving, just tells him to sing when he hears music. While walking away, Victor starts listening to an old-fashioned tape player and powerful rap music starts playing. He then presses a button on his watch, activating the device on Franck's neck. In the dark sky, a machine appears amongst the swirling clouds and a colorful vortex starts to descend from it. Franck, frightened, tries to run away but is sucked into the vortex. After the screen fades to black, Franck wakes up in a new and strange world full of unique looking plants and bugs. He is in a new body (a monkey) but is still wearing the device. The scene spins and we see that this whole world is contained in a washing machine. The machine is in a laundromat with several other machines that contain something similar. Victor suddenly pops out of the machine in the corner and prepares to smoke a cigarette. But before he can smoke, his watch starts buzzing and he goes to bed.
+            </p>
+            <button class="check-answers-button">Check answers</button>
+        </div>
+
+        <div id="vocabulary" class="section">
+            <h2>Vocabulary</h2>
+            <div class="instruction-box"><i class="fas fa-lightbulb icon"></i>Drag the correct word to each blank.</div>
+            <div class="draggable-words" id="draggable-words">
+            </div>
+            <ol id="vocabulary-sentences">
+            </ol>
+            <button class="check-answers-button">Check answers</button>
+            <button class="reset-button">Reset</button>
+            <div id="vocabulary-feedback"></div>
+        </div>
+
+        <div id="real-talk" class="section">
+            <h2>Real Talk</h2>
+            <div class="instruction-box"><i class="fas fa-lightbulb icon"></i>Here you will find some language that can often be heard in real life, but isn't usually found in textbooks.</div>
+
+            <div class="real-talk-clip">
+                <div class="clip-video">
+                    <video id="tip1-video" controls>
+                        <source src="clips/Cosmos Laundromat/cl kind of.mp4" type="video/mp4">
+                        Your browser can not play this video.
+                    </video>
+                </div>
+                <div class="clip-text">
+                    <h3>Kind of</h3>
+                    <p>"Kind of" is a very common informal phrase. It means "to some extent" or "not exactly". It is often used to make a statement or opinion less direct or strong. Example: "I was kind of hoping to leave early."</p>
+                </div>
+            </div>
+
+            <div class="real-talk-clip">
+                <div class="clip-video">
+                    <video id="tip2-video" controls>
+                        <source src="clips/Cosmos Laundromat/cl on about.mp4" type="video/mp4">
+                        Your browser can not play this video.
+                    </video>
+                </div>
+                <div class="clip-text">
+                    <h3>On about</h3>
+                    <p>The phrase "on about" means "talking about", but is a little disrespectful as it suggests that the speaker's words are not worth listening to. "What are you on about?" is a more common way of using this phrase.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="speaking" class="section">
+            <h2>Speaking Activities</h2>
+            <p>Are you interested in some group speaking activities? <a href="/index.html#contact">Contact us</a> to find out more about how you can talk about this film with a class and a teacher!</p>
+        </div>
+
+        <nav class="page-navigation">
+            <a href="tos.html">
+                <button>← Previous</button>
+            </a>
+            <a href="/index.html">
+                <button>Home</button>
+            </a>
+            <a href="next-page.html">
+                <button>Next →</button>
+            </a>
+        </nav>
+    </div>
+
+    <div id="footer-placeholder" class="loaded"></div>
+
+    <script src="/script.js"></script>
+    <script src="script-movies.js"></script>
+    <script>
+        // Initialize the page manager with the data defined above
+        document.addEventListener('DOMContentLoaded', () => {
+            pageManager.init(pageData);
+        });
+    </script>
+</body>
+</html>

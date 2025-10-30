@@ -1,0 +1,831 @@
+/*
+ * Corrected and restructured style.css file.
+ * This version uses a mobile-first approach,
+ * centralizes core styles, and corrects inconsistencies.
+ */
+
+/* --- Base & Global Styles --- */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f7f6;
+    color: #333;
+    text-align: left; /* Left-align all text by default */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1; //This keeps the footer at the bottom of the page when pages are small.
+}
+
+h1 {
+    text-align: center;
+}
+
+#header-placeholder {
+    min-height: 60px; /* Adjust as needed */
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#header-placeholder.loaded {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* --- Footer Styling --- */
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* --- General Content Styling --- */
+
+.p1 {
+    font-family: Helvetica, sans-serif;
+}
+
+.instruction-box {
+    padding: 10px 25px 10px 10px;
+    margin-bottom: 20px;
+    background-color: #eff7ff;
+    border: 1px solid #cceeff;
+    border-radius: 8px;
+    font-size: 1.05em;
+    line-height: 1.5;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    width: fit-content;
+}
+
+.instruction-box .icon {
+    margin-right: 10px;
+    margin-left: 6px;
+    color: #00bbff;
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+
+.page-content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 30px 20px 60px 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.section h2 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/* --- Navigation --- */
+
+.navbar {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar-logo-left img,
+.navbar-logo-right img {
+    height: 40px;
+    width: auto;
+    vertical-align: middle;
+}
+
+.hamburger-menu {
+    display: block; /* Show on mobile by default */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none; /* Hide on mobile by default */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: #333;
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    z-index: 999;
+    align-items: flex-start;
+}
+
+.nav-list.active {
+    display: flex; /* Show vertical nav when active */
+}
+
+.nav-item {
+    width: 100%;
+    margin: 0;
+    position: relative;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.nav-link:hover {
+    background-color: #575757;
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: static; /* Position statically on mobile */
+    background-color: #444;
+    width: 100%;
+    box-shadow: none;
+    display: none; /* Hidden by default */
+}
+
+.nav-list.active .dropdown-menu {
+    display: block; /* Show dropdown when mobile menu is active */
+}
+
+.dropdown-link {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-link:hover {
+    background-color: #666;
+}
+
+#language-switcher {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    margin-right: 10px;
+}
+
+.language-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.language-flag {
+    width: 24px;
+    height: 18px;
+    margin-right: 8px;
+}
+
+/* --- Hero Section --- */
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/breakfast.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-section h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* --- Buttons --- */
+
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.primary-button {
+    background-color: #28a745;
+}
+
+.primary-button:hover {
+    background-color: #218838;
+}
+
+.secondary-button {
+    background-color: #00a896;
+    color: white;
+}
+
+.secondary-button:hover {
+    background-color: #008f80;
+}
+
+.sample-lesson-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* --- About Us Section --- */
+
+#about.section {
+    padding-top: 60px;
+}
+
+.about-section-wrapper {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/people.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 60px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about-section-wrapper h3,
+.about-section-wrapper ul {
+    max-width: 600px;
+    color: white;
+    text-align: justify;
+}
+
+.benefits-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.benefit-item {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex: 1 1 250px;
+    max-width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-item h4,
+.benefit-item p {
+    color: #333;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.benefit-item i {
+    font-size: 2.5em;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.benefit-item h4 {
+    margin: 0 0 5px 0;
+}
+
+/* --- Courses Section --- */
+
+.courses-container {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.courses-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+    font-size: 1.5em;
+    border-radius: 50%;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-button.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.course-card {
+    min-width: calc(33.33% - 13.33px);
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.course-card p {
+    text-align: justify;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+.course-card img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* --- Teachers Section --- */
+
+.teachers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    width: 100%;
+    margin-top: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.teacher-card {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #007bff;
+}
+
+.teacher-card ul {
+    text-align: left;
+}
+
+/* --- Contact Section --- */
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: row; /* Set to row for horizontal layout */
+    align-items: center;
+    gap: 15px; /* Adjust gap to your liking */
+    margin-bottom: 20px;
+}
+
+.contact-item:last-child {
+    margin-bottom: 0;
+}
+
+.contact-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.contact-item img:hover {
+    transform: scale(1.1);
+}
+
+.contact-item p {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.contact-form {
+    max-width: 600px;
+    width: 100%;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    width: auto;
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* --- Sample Lesson Section --- */
+
+.sample-lesson-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.book-viewer {
+    position: relative;
+    width: 100%;
+    max-width: 750px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.book-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px;
+}
+
+.book-page {
+    min-width: 50%; /* Show 2 images at a time */
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.book-page img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+
+/* --- Media Queries --- */
+
+/* Mobile (Max 768px) */
+@media (max-width: 768px) {
+    /* Navbar */
+    .nav-list {
+        right: 20px; /* Adjust positioning for better look */
+    }
+
+    /* NEW MOBILE LAYOUT RULES */
+    .navbar-content {
+        justify-content: space-between; /* Use space-between for alignment */
+    }
+
+    .hamburger-menu {
+        order: 1; /* Far Left */
+        margin-left: 0; /* Remove existing margin-left */
+        margin-right: auto; /* Push content away to the right */
+    }
+
+    #language-switcher {
+        order: 2; /* Middle, next to KakaoTalk */
+        margin-right: 10px; /* Space before KakaoTalk icon */
+        margin-left: auto; /* Remove existing margin-left: auto; if it was meant to be on the far right */
+        padding: 0; /* Remove padding if it's interfering */
+    }
+
+    .navbar-logo-right { /* Renamed from navbar-logo-left for KakaoTalk in HTML */
+        order: 3; /* Far Right */
+    }
+
+    /* Courses Carousel */
+    .course-card {
+        min-width: 100%; /* Show one card at a time */
+    }
+
+    /* Contact Section */
+    .contact-container {
+        gap: 20px;
+    }
+
+    /* Hero Section */
+    .hero-section .button {
+        margin-bottom: 10px;
+    }
+
+}
+
+/* Desktop (Min 769px) */
+@media (min-width: 769px) {
+    .hamburger-menu {
+        display: none; /* Hide hamburger on desktop */
+    }
+
+    .navbar-logo-right {
+        display: block;
+    }
+
+    .nav-list {
+        display: flex; /* Show horizontal nav on desktop */
+        flex-direction: row;
+        position: static;
+        width: auto;
+        box-shadow: none;
+    }
+
+    .nav-item {
+        width: auto;
+        margin: 0 15px;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        display: none; /* Hide on desktop by default */
+    }
+
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block; /* Show dropdown on hover */
+    }
+
+    .navbar-content .nav-list {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+    }
+
+    /* Contact Section */
+    .contact-container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .contact-info-wrapper {
+        flex: 1;
+        max-width: 350px;
+        max-height: 282px; //A hack job to make the boxes the same height. Gemini couldn't do it.
+        padding: 30px;
+    }
+
+    .contact-form {
+        flex: 2;
+        max-width: none;
+        padding: 30px;
+    }
+}
+
+/* Specific overrides to handle text alignment inconsistencies */
+.hero-section, .hero-section h1, .hero-section p, .section h2 {
+    text-align: center;
+}
+.benefit-item p {
+    text-align: left;
+}
+.page-navigation .left-button-container {
+    margin-right: auto;
+}
+
+/* --- Practice Page Specific Styles --- */
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.movie-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.movie-card .card-content {
+    padding: 15px;
+    text-align: left;
+}
+
+.movie-card h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.movie-card p {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.how-to-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.how-to-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.how-to-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.how-to-card h3 {
+    margin-top: 0;
+}
+
+/* Styles for FAQ page */
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.faq-question {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question:hover {
+    color: #007bff;
+}
+
+.faq-icon {
+    font-size: 1.5em;
+    font-weight: normal;
+    transition: transform 0.3s ease;
+}
+
+.faq-question.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    /* Indentation for the answer */
+    /* padding-left: 20px; */
+    margin-top: 10px;
+    /* Transition for smooth show/hide effect */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.faq-answer ol {
+    padding-left: 20px;
+    list-style-type: decimal;
+}
+
+
+.faq-question strong {
+    flex-grow: 1;
+}

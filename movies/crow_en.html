@@ -1,0 +1,259 @@
+crow<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="English practice, movie English, ESL, EFL, listening practice, vocabulary, comprehension, intermediate English, Crow, online English lessons">
+    <meta name="description" content="Improve your English with interactive listening, comprehension, and vocabulary activities based on the short film 'Crow.' Perfect for intermediate English learners.">
+    <title>Crow - English Practice With Short Films</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style-movies.css">
+    <script>
+        // Make sure all necessary data is uncommented and complete here!
+        const pageData = {
+            mainVideoSrc: "https://www.youtube.com/embed/KYFrgc6OiLg",
+            listeningBlanks: [
+                {
+                    id: 'blank1',
+                    solution: 'gotta',
+                    explanation: '<q>Gotta</q> is the speaking style version of <q>got to</q> and is another way of saying <q>have to</q>.',
+                    videoSrc: 'clips/Crow/crow Listening 1.mp4',
+                    transcript: '<i>Turtle</i>: Yeah, we <span class="blank-word">_____</span> do something before we freeze to ... death.'
+                },
+                {
+                    id: 'blank2',
+                    solution: 'What if',
+                    explanation: '<q>What if</q> is an expression that is often used when worrying about something. <q>What if it rains?</q>.',
+                    videoSrc: 'clips/Crow/crow Listening 2.mp4',
+                    transcript: '<i>Skunk</i>: I know he will do anything he can to save us. Make any sacrifice. Unless something happened. <span class="blank-word">_______</span> he’s in trouble?'
+                },
+                {
+                    id: 'blank3',
+                    solution: 'not let',
+                    explanation: 'To <q>let</q> something happen is to allow it. A child might say <q>Please let me play with my toys!</q>',
+                    videoSrc: 'clips/Crow/crow Listening 3.mp4',
+                    transcript: '<i>The One</i>: Well don’t just stand there. Go! Hurry! And whatever you do, you must <span class="blank-word">_______</span> that torch burn out!'
+                },
+                {
+                    id: 'blank4',
+                    solution: 'stop singing',
+                    explanation: '<q>Stop -ing</q> is very common grammar.',
+                    videoSrc: 'clips/Crow/crow Listening 4.mp4',
+                    transcript: '<i>Skunk</i>: You’re not gonna <span class="blank-word">____________</span>, right?'
+                }
+                // ... add more listening blanks as needed
+            ],
+            comprehensionAnswers: {
+                q1: "c", q2: "a", q3: "d", q4: "a", q5: "b"
+            },
+            mistakesToHighlight: [
+                'spring', 'into the moon', 'paper', "can't see Turtle", 'cat'
+            ],
+            vocabularyDragWords: ['sacrifice', 'resist', 'rehearsals', 'insect', 'branch'],
+            vocabularySentences: [
+                { text: "Skunk thought that Crow would make any ____ to save his friends.", correctWord: "sacrifice" },
+                { text: "Moth couldn't ____ flying into the sun.", correctWord: "resist" },
+                { text: "At first, Crow didn't want to go to space because he had ____.", correctWord: "rehearsals" },
+                { text: "The One Who Creates Everything By Thinking looks like a small purple ____.", correctWord: "insect" },
+                { text: "The fire went out when Crow knocked the ____ over with his tail.", correctWord: "branch" }
+            ],
+            // displayNavigationButtons: false // Set to false to hide the buttons. No. Find this variable in script-movies.js
+        };
+    </script>
+
+</head>
+<body>
+    <div id="header-placeholder" class="loaded"></div>
+
+    <div class="page-content-wrapper">
+        <h1>Crow</h1>
+
+        <div class="video-main-container">
+            <iframe id="main-video-iframe" src="https://www.youtube.com/embed/KYFrgc6OiLg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="facts-container">
+            <p><strong>Title:</strong> Crow</p>
+            <p><strong>By:</strong> Baobab Studios</p>
+            <p><strong>Genre:</strong> Animation</p>
+            <p><strong>Language Difficulty:</strong> Intermediate</p>
+            <p><strong>Story Difficulty:</strong> Easy</p>
+            <p><strong>Ages:</strong> All</p>
+            <p><strong>Run Time:</strong> 16 minutes 34 seconds</p>
+        </div>
+
+        <!-- These buttons can be hidden in script-movies.js -->
+        <section id="nav-buttons-section" class="nav-sections hidden-by-default">
+            <a href="#listening"><button>Listening</button></a>
+            <a href="#comprehension1"><button>Test Your Understanding</button></a>
+            <a href="#mistakes"><button>Find the Mistakes</button></a>
+            <a href="#vocabulary"><button>Vocabulary</button></a>
+            <a href="#real-talk"><button>Real Talk</button></a>
+            <a href="#speaking"><button>Speaking Activities</button></a>
+        </section>
+
+        <div id="listening" class="section">
+            <h2>Listening</h2>
+        </div>
+
+        <div id="comprehension1" class="section">
+            <h2>Test your understanding</h2>
+            <div class="question">
+                <p>1. Who is Crow's biggest fan?</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="a"> A. Owl</label>
+                    <label><input type="radio" name="q1" value="b"> B. Moth.</label>
+                    <label><input type="radio" name="q1" value="c"> C. Skunk.</label>
+                    <label><input type="radio" name="q1" value="d"> D. Turtle.</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>2. Why couldn't Moth go on the mission?</p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="a"> A. He would fly into the sun.</label>
+                    <label><input type="radio" name="q2" value="b"> B. He can't fly well.</label>
+                    <label><input type="radio" name="q2" value="c"> C. He had something else to do.</label>
+                    <label><input type="radio" name="q2" value="d"> D. He is afraid of space.</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>3. What did they want The One Who Creates Everything By Thinking to do?</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="a"> A. Think about the sun.</label>
+                    <label><input type="radio" name="q3" value="b"> B. Give them fire.</label>
+                    <label><input type="radio" name="q3" value="c"> C. Create warm clothes.</label>
+                    <label><input type="radio" name="q3" value="d"> D. Unthink the cold.</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>4. After the fire went out, Crow did something that was _____ to light it again.</p>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="a"> A. dangerous</label>
+                    <label><input type="radio" name="q4" value="b"> B. easy</label>
+                    <label><input type="radio" name="q4" value="c"> C. thoughtless</label>
+                    <label><input type="radio" name="q4" value="d"> D. time-consuming</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>5. Why did The One Who Creates Everything By Thinking give Crow new colors?</p>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="a"> A. To help him find a girlfriend.</label>
+                    <label><input type="radio" name="q5" value="b"> B. To reward him for his bravery.</label>
+                    <label><input type="radio" name="q5" value="c"> C. To make him a better performer.</label>
+                    <label><input type="radio" name="q5" value="d"> D. To punish him for not thinking about his friends.</label>
+                </div>
+            </div>
+            <button class="check-answers-button">Check Answers</button>
+            <button class="reset-button">Reset</button>
+            <div id="answer-feedback"></div>
+        </div>
+
+        <div id="mistakes" class="section">
+            <h2>Find the Mistakes</h2>
+            <div class="instruction-box"><i class="fas fa-lightbulb icon"></i>There are five mistakes in the writing below. Can you find them all?</div>
+            <p id="mistakes-text-content">
+            In this story, Crow is given an important mission. The film starts with a happy scene of animals in the forest. We see Crow practicing singing his signature tune "When You Can Fly" and learn that he is famous in the forest. But then one day, spring comes to the forest for the first time and the animals don't know how to handle it. Owl comes up with a plan to save the forest. They need someone to fly through space and find The One Who Creates Everything By Thinking and convince her to "unthink" the cold. But Turtle and Skunk can't fly, Owl has difficulty flying and Moth would be in danger of flying into the moon. At first, Crow is unwilling, but eventually the other animals convince him. So Crow flies past the moon and sun in a long journey through space. Back in the forest, the animals start to worry about Crow. Moth flies off to search for him, despite protests from the other animals. In the meantime, Crow finds a majestic glowing palace. In the middle of it, in a small container, he sees a small purple cat - The One Who Creates Everything By Thinking. He finds it difficult to wake her up, so he sings his signature tune again. This gets her attention. We see her create things just by thinking about it, such as a treadmill. Crow asks her for help and she eventually gives him a paper and sets it on fire, telling him not to let it burn out. On the way back, Crow finds Moth flying into the sun, but grabs him just in time and drags him to a nearby asteroid. On the asteroid, Crow accidentally knocks over the branch and it goes out. Crow comes up with a dangerous plan to light the branch in the sun. Moth and the sun warn him not to do it but he is too determined. Back in the forest, we see fire falling from the sky and lighting up a branch. The animals are excited by the warmth, but soon become worried because they can't see Turtle. Crow appears and looks sad. His voice and feathers have changed after being burned by the sun. Skunk tries to cheer him up, but it doesn't seem to work. But just then, everything changes. The One Who Creates Everything By Thinking, impressed by Crow's sacrifice, transforms the whole forest, bringing back the good weather. Crow is thrilled. The movie ends with Crow singing in his new voice, while the other animals dance around happily.
+            </p>
+            <button class="check-answers-button">Check answers</button>
+        </div>
+
+        <div id="vocabulary" class="section">
+            <h2>Vocabulary</h2>
+            <div class="instruction-box"><i class="fas fa-lightbulb icon"></i>Drag the correct word to each blank.</div>
+            <div class="draggable-words" id="draggable-words">
+            </div>
+            <ol id="vocabulary-sentences">
+            </ol>
+            <button class="check-answers-button">Check answers</button>
+            <button class="reset-button">Reset</button>
+            <div id="vocabulary-feedback"></div>
+        </div>
+
+        <div id="real-talk" class="section">
+            <h2>Real Talk</h2>
+            <div class="instruction-box"><i class="fas fa-lightbulb icon"></i>Here you will find some language that can often be heard in real life, but isn't usually found in textbooks.</div>
+
+            <div class="real-talk-clip">
+                <div class="clip-video">
+                    <video id="tip1-video" controls>
+                        <source src="clips/Crow/crow busted.mp4" type="video/mp4">
+                        Your browser can not play this video.
+                    </video>
+                </div>
+                <div class="clip-text">
+                    <h3>Busted</h3>
+                    <p>Some common ways of using this expression include "I got busted" and "You're busted". The word means to get caught doing something that you shouldn't be doing. In this case, Skunk was trying to hide from Crow, but Crow realized that someone was there.</p>
+                </div>
+            </div>
+            <div class="real-talk-clip">
+                <div class="clip-video">
+                    <video id="tip2-video" controls>
+                        <source src="clips/Crow/crow dig.mp4" type="video/mp4">
+                        Your browser can not play this video.
+                    </video>
+                </div>
+                <div class="clip-text">
+                    <h3>Dig</h3>
+                    <p>To "dig" something is to like it. Crow is saying that he thinks Skunk will enjoy his show at the pond.</p>
+                </div>
+            </div>
+
+            <div class="real-talk-clip">
+                <div class="clip-video">
+                    <video id="tip3-video" controls>
+                        <source src="clips/Crow/crow check out.mp4" type="video/mp4">
+                        Your browser can not play this video.
+                    </video>
+                </div>
+                <div class="clip-text">
+                    <h3>Check out</h3>
+                    <p>When Crow says "You're gonna check it out, right", he is confirming that Skunk is going to go to the show. In general, to "check something out" is to go to a place or look at something. For example, "Check out that guy's new car."</p>
+                </div>
+            </div>
+
+            <div class="real-talk-clip">
+                <div class="clip-video">
+                    <video id="tip4-video" controls>
+                        <source src="clips/Crow/crow aint.mp4" type="video/mp4">
+                        Your browser can not play this video.
+                    </video>
+                </div>
+                <div class="clip-text">
+                    <h3>Ain't</h3>
+                    <p>"Ain't" is mostly used in the USA and can often be heard in Hollywood movies and real speech. It means "isn't"/"aren't."</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="speaking" class="section">
+            <h2>Speaking Activities</h2>
+            <p>Are you interested in some group speaking activities? <a href="/index.html#contact">Contact us</a> to find out more about how you can talk about this film with a class and a teacher!</p>
+        </div>
+
+        <nav class="page-navigation">
+            <a href="crow.html">
+                <button>← Previous</button>
+            </a>
+            <a href="/index.html">
+                <button>Home</button>
+            </a>
+            <a href="next-page.html">
+                <button>Next →</button>
+            </a>
+        </nav>
+    </div>
+
+    <div id="footer-placeholder" class="loaded"></div>
+
+    <script src="/script.js"></script>
+    <script src="script-movies.js"></script>
+    <script>
+        // Initialize the page manager with the data defined above
+        document.addEventListener('DOMContentLoaded', () => {
+            pageManager.init(pageData);
+        });
+    </script>
+</body>
+</html>

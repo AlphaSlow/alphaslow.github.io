@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="English practice, movie English, ESL, EFL, listening practice, vocabulary, comprehension, intermediate English, Life Is Strange, online English lessons">
+    <meta name="description" content="Improve your English with interactive listening, comprehension, and vocabulary activities based on the short film 'Life Is Strange.' Perfect for intermediate English learners.">
+    <title>Life Is Strange - English Practice With Short Films</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style-movies.css">
+    <script>
+        // Make sure all necessary data is uncommented and complete here!
+        const pageData = {
+            mainVideoSrc: "https://www.youtube.com/embed/Ml-9GyPK_hw",
+            listeningBlanks: [
+                {
+                    id: 'blank1',
+                    solution: 'anymore',
+                    explanation: '<q>Anymore</q> is used when something stops, such as in the sentence <q>It&#39s not raining anymore.',
+                    videoSrc: 'clips/Life Is Strange/LIS listening 1.mp4',
+                    transcript: '<i>Boyfriend</i>: It&#39s not that I don’t love you <span class="blank-word"></span>. It’s, it’s just that I want us to be just friends.'
+                },
+                {
+                    id: 'blank2',
+                    solution: 'used to',
+                    explanation: 'Here, she is telling her mother that she is still adjusting to her situation in Japan.',
+                    videoSrc: 'clips/Life Is Strange/LIS listening 2.mp4',
+                    transcript: '<i>Robin</i>: Um, I&#39m sorry I haven&#39t called. Um, I&#39m just getting <span class="blank-word"></span> everything here and, I&#39m, I&#39m having a good time. It&#39s good.'
+                },
+                {
+                    id: 'blank3',
+                    solution: 'at home',
+                    explanation: '<q>Make yourself at home</q> is a normal way of telling visitors to relax and feel comfortable in your home.',
+                    videoSrc: 'clips/Life Is Strange/LIS listening 3.mp4',
+                    transcript: '<i>Grandmother</i>: Please, make yourself <span class="blank-word">_______</span>.<br><i>Robin</i>: Thank you.'
+                },
+                {
+                    id: 'blank4',
+                    solution: 'No matter',
+                    explanation: 'This is common grammar, and takes the form <q>No matter how _____, _____.</q>',
+                    videoSrc: 'clips/Life Is Strange/LIS listening 4.mp4',
+                    transcript: '<i>Robin</i>: <span class="blank-word"></span> how horrible, how terrible things got, I kept telling myself that it was ok.'
+                }
+            ],
+            comprehensionAnswers: {
+                q1: "a", q2: "c", q3: "d", q4: "b", q5: "d"
+            },
+            mistakesToHighlight: [
+                'a singer', 'a restaurant', ,'cake', 'playing tennis', 'jungle'
+            ],
+            vocabularyDragWords: ['backpack', 'country', 'smashed', 'admitted', 'attitude'],
+            vocabularySentences: [
+                { text: "Robin carried her things in a ____.", correctWord: "backpack" },
+                { text: "The girl stayed with her grandmother at a house in the ____.", correctWord: "country" },
+                { text: "Robin ____ a watermelon with a baseball bat.", correctWord: "smashed" },
+                { text: "She ____ that she had not been lying to herself.", correctWord: "admitted" },
+                { text: "At the end of the movie, Robin managed to change her ____.", correctWord: "attitude" }
+            ],
+            // displayNavigationButtons: false // Set to false to hide the buttons. No. Find this variable in script-movies.js
+        };
+    </script>
+
+</head>
+<body>
+    <div id="header-placeholder" class="loaded"></div>
+
+    <div class="page-content-wrapper">
+        <h1>Life Is Strange</h1>
+
+        <div class="video-main-container">
+            <iframe id="main-video-iframe" src="https://www.youtube.com/embed/Ml-9GyPK_hw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="facts-container">
+            <p><strong>Title:</strong> Life Is Strange</p>
+            <p><strong>By:</strong> Suyeol Jang</p>
+            <p><strong>Genre:</strong> Drama</p>
+            <p><strong>Language Difficulty:</strong> Intermediate</p>
+            <p><strong>Story Difficulty:</strong> Easy</p>
+            <p><strong>Ages:</strong> All</p>
+            <p><strong>Run Time:</strong> 17 minutes 40 seconds</p>
+        </div>
+
+        <section id="nav-buttons-section" class="nav-sections hidden-by-default">
+            <a href="#listening"><button>Listening</button></a>
+            <a href="#comprehension1"><button>Test Your Understanding</button></a>
+            <a href="#mistakes"><button>Find the Mistakes</button></a>
+            <a href="#vocabulary"><button>Vocabulary</button></a>
+            <a href="#real-talk"><button>Real Talk</button></a>
+            <a href="#speaking"><button>Speaking Activities</button></a>
+        </section>
+
+        <div id="listening" class="section">
+            <h2>Listening</h2>
+        </div>
+
+        <div id="comprehension1" class="section">
+            <h2>Test your understanding</h2>
+            <div class="question">
+                <p>1. What is most likely Robin's job?</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="a"> A. Actress.</label>
+                    <label><input type="radio" name="q1" value="b"> B. Teacher.</label>
+                    <label><input type="radio" name="q1" value="c"> C. Musician.</label>
+                    <label><input type="radio" name="q1" value="d"> D. Comedian.</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>2. Why did Robin's boyfriend contact her?</p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="a"> A. To ask her a question.</label>
+                    <label><input type="radio" name="q2" value="b"> B. To answer a question that she asked.</label>
+                    <label><input type="radio" name="q2" value="c"> C. To break up with her.</label>
+                    <label><input type="radio" name="q2" value="d"> D. To explain why he was angry.</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>3. Why didn't the girl want Robin to be alone at the station?</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="a"> A. She thought Robin looked hungry.</label>
+                    <label><input type="radio" name="q3" value="b"> B. She wanted to play a game.</label>
+                    <label><input type="radio" name="q3" value="c"> C. She thought the weather was horrible.</label>
+                    <label><input type="radio" name="q3" value="d"> D. She said it was dangerous.</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>4. Why was the grandmother so happy that Robin was friendly with the girl?</p>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="a"> A. The girl needed someone to teach her English.</label>
+                    <label><input type="radio" name="q4" value="b"> B. The girl was lonely.</label>
+                    <label><input type="radio" name="q4" value="c"> C. The girl was annoying her grandmother.</label>
+                    <label><input type="radio" name="q4" value="d"> D. The girl needed someone to cook better food for her.</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>5. What did Robin NOT experience on her visit to the house?</p>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="a"> A. Good food.</label>
+                    <label><input type="radio" name="q5" value="b"> B. The pleasures of a simple life.</label>
+                    <label><input type="radio" name="q5" value="c"> C. The value of relationships.</label>
+                    <label><input type="radio" name="q5" value="d"> D. Fast Japanese internet.</label>
+                </div>
+            </div>
+            <button class="check-answers-button">Check Answers</button>
+            <button class="reset-button">Reset</button>
+            <div id="answer-feedback"></div>
+        </div>
+
+        <div id="mistakes" class="section">
+            <h2>Find the Mistakes</h2>
+            <div class="instruction-box"><i class="fas fa-lightbulb icon"></i>There are five mistakes in the writing below. Can you find them all?</div>
+            <p id="mistakes-text-content">
+            This is a story of personal connections. At the start of the movie, we see a singer having a bad day. At an audition, she fails without getting any real attention. Then her boyfriend leaves her a message saying that he has found someone else. She misses her train and has to wait at the train station. There, she meets a young girl and her grandmother, who invite her back to a restaurant for lunch. There, she relaxes and starts to become friendly with the girl. Her grandmother, who is happy to see this, invites her to stay longer. We see Robin doing several activities with the family. The first is a game in which they have to hit a cake while wearing a blindfold. While playing this game, the grandmother and granddaughter can see that Robin has a lot of anger inside her. Later, Robin spends time with each of them individually. While they are playing tennis, the grandmother thanks Robin for being a friend to her lonely granddaughter. Robin admits to the grandmother that she has lied to herself by not admitting that she was not ok. When it is time to leave, the girl has a hard time saying goodbye and it is clear that Robin has had a big impact on her. At the end of the film, we see Robin howling at the moon and running into the jungle with her clothes on. It is clear that her new friendships have helped her a lot.
+            </p>
+            <button class="check-answers-button">Check answers</button>
+        </div>
+
+        <div id="vocabulary" class="section">
+            <h2>Vocabulary</h2>
+            <div class="instruction-box"><i class="fas fa-lightbulb icon"></i>Drag the correct word to each blank.</div>
+            <div class="draggable-words" id="draggable-words">
+            </div>
+            <ol id="vocabulary-sentences">
+            </ol>
+            <button class="check-answers-button">Check answers</button>
+            <button class="reset-button">Reset</button>
+            <div id="vocabulary-feedback"></div>
+        </div>
+
+        <div id="real-talk" class="section">
+            <h2>Real Talk</h2>
+            <div class="instruction-box"><i class="fas fa-lightbulb icon"></i>Here you will find some language that can often be heard in real life, but isn't usually found in textbooks.</div>
+
+            <div class="real-talk-clip">
+                <div class="clip-video">
+                    <video id="tip1-video" controls>
+                        <source src="clips/Life Is Strange/LIS babe.mp4" type="video/mp4">
+                        Your browser can not play this video.
+                    </video>
+                </div>
+                <div class="clip-text">
+                    <h3>Babe</h3>
+                    <p>"Babe" shows care for someone else and is often used by partners in a relationship. It is short for "baby".</p>
+                </div>
+            </div>
+
+            <div class="real-talk-clip">
+                <div class="clip-video">
+                    <video id="tip2-video" controls>
+                        <source src="clips/Life Is Strange/LIS darling.mp4" type="video/mp4">
+                        Your browser can not play this video.
+                    </video>
+                </div>
+                <div class="clip-text">
+                    <h3>Darling</h3>
+                    <p>Similar to "babe," "darling" is a term of affection. It can be used romantically but is also often used by older people to address younger people or a close, non-romantic friend.</p>
+                </div>
+            </div>
+
+            <div class="real-talk-clip">
+                <div class="clip-video">
+                    <video id="tip3-video" controls>
+                        <source src='clips/Life Is Strange/LIS sweetie.mp4' type="video/mp4">
+                        Your browser can not play this video.
+                    </video>
+                </div>
+                <div class="clip-text">
+                    <h3>Sweetie</h3>
+                    <p>"Sweetie" is another similar word, usually used by romantic partners or by seniors addressing younger people. It is another form of "sweetheart".</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="speaking" class="section">
+            <h2>Speaking Activities</h2>
+            <p>Are you interested in some group speaking activities? <a href="/index.html#contact">Contact us</a> to find out more about how you can talk about this film with a class and a teacher!</p>
+        </div>
+
+        <nav class="page-navigation">
+            <a href="tos_en.html">
+                <button>← Previous</button>
+            </a>
+            <a href="/index.html">
+                <button>Home</button>
+            </a>
+            <a href="next-page.html">
+                <button>Next →</button>
+            </a>
+        </nav>
+    </div>
+
+    <div id="footer-placeholder" class="loaded"></div>
+
+    <script src="/script.js"></script>
+    <script src="script-movies.js"></script>
+    <script>
+        // Initialize the page manager with the data defined above
+        document.addEventListener('DOMContentLoaded', () => {
+            pageManager.init(pageData);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="English practice, movie English, ESL, EFL, listening practice, vocabulary, comprehension, intermediate English, The Man in the Fiber Optic Cable, online English lessons">
+    <meta name="description" content="Improve your English with interactive listening, comprehension, and vocabulary activities based on the short film 'The Man in the Fiber Optic Cable.' Perfect for intermediate English learners.">
+    <title>The Man in the Fiber Optic Cable - English Practice With Short Films</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style-movies.css">
+    <script>
+        // Make sure all necessary data is uncommented and complete here!
+        const pageData = {
+            mainVideoSrc: "https://www.youtube.com/embed/iLT8Sr1cp6A",
+            listeningBlanks: [
+                {
+                    id: 'blank1',
+                    solution: 'to be honest',
+                    explanation: 'This expression is often used when the speaker admits something that they don&#39t want to admit',
+                    videoSrc: 'clips/cable/cable listening 1.mp4',
+                    transcript: '<i>Gary</i>: Are you happy with your internet service provider? Well, <span class="blank-word"></span>, Mark, that&#39s a common complaint.'
+                },
+
+                {
+                    id: 'blank2',
+                    solution: 'my word',
+                    explanation: "This is another way of saying <q>I promise<q>.",
+                    videoSrc: 'clips/cable/cable listening 2.mp4',
+                    transcript: '<i>Gary</i>: That&#39s great to hear, Mark. I&#39ll send you the forms right away. Yes, Mark, you have <span class="blank-word"></span>.'
+                },
+                {
+                    id: 'blank3',
+                    solution: 'personally',
+                    explanation: 'The word <q>personally</q> is used to emphasize that the speaker, and not another person, will do the action.',
+                    videoSrc: 'clips/cable/cable listening 3.mp4',
+                    transcript: '<i>Gary</i>: That&#39s right Aaron, I&#39ll <span class="blank-word"></span> ensure your connection is faster than any other provider out there, or your money back.'
+                },
+                {
+                    id: 'blank4',
+                    solution: 'figured',
+                    explanation: 'To <q>figure something out</q> is to find the answer to a question. It is different to <q>learning</q> because it means that the person was deliberately trying to find an answer.',
+                    videoSrc: 'clips/cable/cable listening 4.mp4',
+                    transcript: '<i>Boss</i>: You know our competitors have been messing around with, uh, relay technology. We have too but... looks like they <span class="blank-word"></span> it out, man.'
+                }
+                // ... add more listening blanks as needed
+            ],
+            comprehensionAnswers: {
+                q1: "c", q2: "c", q3: "b", q4: "a", q5: "d"
+            },
+            mistakesToHighlight: [
+                'Anthony', 'up a mountain', 'swimming', 'cycling', 'uncle'
+            ],
+            vocabularyDragWords: ['provider', 'ensure', 'complaint', 'relay', 'disconnected'],
+            vocabularySentences: [
+                { text: "Gary is working for an internet service ____, FiberSprint.", correctWord: "provider" },
+                { text: "The call center agents must ____ that the connection is faster than any other.", correctWord: "ensure" },
+                { text: "Gary calls the support line to register a ____ about his bad food.", correctWord: "complaint" },
+                { text: "The competitors are messing around with ____ technology.", correctWord: "relay" },
+                { text: "During the emotional call with his dad, the call is ____.", correctWord: "disconnected" }
+            ],
+            // displayNavigationButtons: false // Set to false to hide the buttons. No. Find this variable in script-movies.js
+        };
+    </script>
+
+</head>
+<body>
+    <div id="header-placeholder" class="loaded"></div>
+
+    <div class="page-content-wrapper">
+        <h1>The Man in the Fiber Optic Cable</h1>
+
+        <div class="video-main-container">
+            <iframe id="main-video-iframe" src="https://www.youtube.com/embed/iLT8Sr1cp6A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="facts-container">
+            <p><strong>Title:</strong> The Man in the Fiber Optic Cable</p>
+            <p><strong>By:</strong> Lucas Cunningham</p>
+            <p><strong>Genre:</strong> Workplace drama</p>
+            <p><strong>Language Difficulty:</strong> Intermediate</p>
+            <p><strong>Story Difficulty:</strong> Medium</p>
+            <p><strong>Ages:</strong> All</p>
+            <p><strong>Run Time:</strong> 13 minutes 7 seconds</p>
+        </div>
+
+        <section id="nav-buttons-section" class="nav-sections hidden-by-default">
+            <a href="#listening"><button>Listening</button></a>
+            <a href="#comprehension1"><button>Test Your Understanding</button></a>
+            <a href="#mistakes"><button>Find the Mistakes</button></a>
+            <a href="#vocabulary"><button>Vocabulary</button></a>
+            <a href="#real-talk"><button>Real Talk</button></a>
+            <a href="#speaking"><button>Speaking Activities</button></a>
+        </section>
+
+        <div id="listening" class="section">
+            <h2>Listening</h2>
+        </div>
+
+        <div id="comprehension1" class="section">
+            <h2>Test your understanding</h2>
+            <div class="question">
+                <p>1. Which of these things does Gary NOT do at his job?</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="a"> A. Customer support.</label>
+                    <label><input type="radio" name="q1" value="b"> B. Order food.</label>
+                    <label><input type="radio" name="q1" value="c"> C. Deliver food.</label>
+                    <label><input type="radio" name="q1" value="d"> D. Improve internet speed.</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>2. Who is Gary?</p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="a"> A. A customer service agent who works in a normal call center.</label>
+                    <label><input type="radio" name="q2" value="b"> B. A man who designs new internet cables.</label>
+                    <label><input type="radio" name="q2" value="c"> C. The man who runs in the fiber optic cable to create connection speed.</label>
+                    <label><input type="radio" name="q2" value="d"> D. The CEO of FiberSprint.</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>3. Gary got emotional when he recognized someone's voice on the phone. Who was he talking to?</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="a"> A. His boss.</label>
+                    <label><input type="radio" name="q3" value="b"> B. His father.</label>
+                    <label><input type="radio" name="q3" value="c"> C. A new friend.</label>
+                    <label><input type="radio" name="q3" value="d"> D. Someone that seemed dangerous.</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>4. Why did Gary lose his job?</p>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="a"> A. Competitors created a faster technology.</label>
+                    <label><input type="radio" name="q4" value="b"> B. His boss thought he wasn't training hard enough.</label>
+                    <label><input type="radio" name="q4" value="c"> C. He decided to quit so that he could see his father.</label>
+                    <label><input type="radio" name="q4" value="d"> D. He woke up too late.</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>5. Which of the following best describes the main message of the movie?</p>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="a"> A. Jobs are more important than family relationships.</label>
+                    <label><input type="radio" name="q5" value="b"> B. Quality food is important in the workplace.</label>
+                    <label><input type="radio" name="q5" value="c"> C. Workers must train hard and keep in shape.</label>
+                    <label><input type="radio" name="q5" value="d"> D. There are many companies that mistreat employees.</label>
+                </div>
+            </div>
+            <button class="check-answers-button">Check Answers</button>
+            <button class="reset-button">Reset</button>
+            <div id="answer-feedback"></div>
+        </div>
+
+        <div id="mistakes" class="section">
+            <h2>Find the Mistakes</h2>
+            <div class="instruction-box"><i class="fas fa-lightbulb icon"></i>There are five mistakes in the writing below. Can you find them all?</div>
+            <p id="mistakes-text-content">
+              This is a story about the difficulties of working for the wrong company. The main character, who is called Anthony, works at an internet service provider. He does call center work, dealing with customer complaints. On top of this, he has to ensure that customers are receiving the fastest internet possible. He provides their internet by running up a mountain, and the faster he runs, the faster their internet is. He must keep increasing his speed so that his company can keep up with its competitors. We see him doing all kinds of training, including jogging, weight training and swimming. He trains and runs harder and harder, while not sleeping enough. During this time, he also has other problems, like bad food and lack of contact with his family. When he does finally talk to his father, we learn that he is sick and needs treatment. Gary continues the training, but eventually his body reaches its limit and he collapses while running. His uncle tells him that other companies have developed a faster technology ("relay technology") and that he is being replaced. We see him being forced to leave the office as a cycling team moves in to replace him. At the end of the movie, he finally manages to see his father and they finally make a real human connection. The story illustrates how some companies force people to work too hard, give them difficult conditions (bad food) and prevent them from doing the important things in life, such as seeing their loved ones.
+            </p>
+            <button class="check-answers-button">Check answers</button>
+        </div>
+
+        <div id="vocabulary" class="section">
+            <h2>Vocabulary</h2>
+            <div class="instruction-box"><i class="fas fa-lightbulb icon"></i>Drag the correct word to each blank.</div>
+            <div class="draggable-words" id="draggable-words">
+            </div>
+            <ol id="vocabulary-sentences">
+            </ol>
+            <button class="check-answers-button">Check answers</button>
+            <button class="reset-button">Reset</button>
+            <div id="vocabulary-feedback"></div>
+        </div>
+
+        <div id="real-talk" class="section">
+            <h2>Real Talk</h2>
+            <div class="instruction-box"><i class="fas fa-lightbulb icon"></i>Here you will find some language that can often be heard in real life, but isn't usually found in textbooks.</div>
+
+            <div class="real-talk-clip">
+                <div class="clip-video">
+                    <video id="tip1-video" controls>
+                        <source src="clips/cable/cable bummer.mp4" type="video/mp4">
+                        Your browser can not play this video.
+                    </video>
+                </div>
+                <div class="clip-text">
+                    <h3>Bummer</h3>
+                    <p>"Bummer" is a common, informal word for a disappointing or unpleasant situation. It is often used to express sympathy or minor disappointment.</p>
+                </div>
+            </div>
+
+            <div class="real-talk-clip">
+                <div class="clip-video">
+                    <video id="tip2-video" controls>
+                        <source src="clips/cable/cable youve got this.mp4" type="video/mp4">
+                        Your browser can not play this video.
+                    </video>
+                </div>
+                <div class="clip-text">
+                    <h3>You've got this</h3>
+                    <p>This is a common phrase used to encourage someone, meaning they have the ability or confidence to succeed in something difficult. It's similar to "You can do it."</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="speaking" class="section">
+            <h2>Speaking Activities</h2>
+            <p>Are you interested in some group speaking activities? <a href="/index.html#contact">Contact us</a> to find out more about how you can talk about this film with a class and a teacher!</p>
+        </div>
+
+        <nav class="page-navigation">
+            <a href="crow.html">
+                <button>← Previous</button>
+            </a>
+            <a href="/index.html">
+                <button>Home</button>
+            </a>
+            <a href="next-page.html">
+                <button>Next →</button>
+            </a>
+        </nav>
+    </div>
+
+    <div id="footer-placeholder" class="loaded"></div>
+
+    <script src="/script.js"></script>
+    <script src="script-movies.js"></script>
+    <script>
+        // Initialize the page manager with the data defined above
+        document.addEventListener('DOMContentLoaded', () => {
+            pageManager.init(pageData);
+        });
+    </script>
+</body>
+</html>

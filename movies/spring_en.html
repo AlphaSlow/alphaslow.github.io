@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="English practice, movie English, ESL, EFL, vocabulary, comprehension, intermediate English, Spring, online English lessons">
+    <meta name="description" content="Improve your English with interactive listening, comprehension, and vocabulary activities based on the short film 'Spring.' Perfect for intermediate English learners.">
+    <title>Spring - English Practice With Short Films</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style-movies.css">
+    <script>
+        // Make sure all necessary data is uncommented and complete here!
+        const pageData = {
+            mainVideoSrc: "https://www.youtube.com/watch?v=WhWc3b3KhnY",
+            comprehensionAnswers: {
+                q1: "c", q2: "b", q3: "d", q4: "b", q5: "a"
+            },
+            mistakesToHighlight: [
+                "beach", "fall down", "upsets", "wings", "sad"
+            ],
+            vocabularyDragWords: ['shepherd', 'staff', 'cliff', 'trampled', 'chain'],
+            vocabularySentences: [
+                { text: "A young ____ and her dog walked into a cold and dark forest.", correctWord: "shepherd" },
+                { text: "The girl hit the rock with her ____.", correctWord: "staff" },
+                { text: "The dog blocked the note before it fell off a ____.", correctWord: "cliff" },
+                { text: "The girl was almost ____ by one of the creatures.", correctWord: "trampled" },
+                { text: "She put the musical note on a long ____ full of other notes.", correctWord: "chain" }
+            ],
+        };
+    </script>
+</head>
+<body>
+    <div id="header-placeholder" class="loaded"></div>
+
+    <div class="page-content-wrapper">
+        <h1>Spring</h1>
+
+        <div class="video-main-container">
+            <iframe id="main-video-iframe" src="https://www.youtube.com/embed/WhWc3b3KhnY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="facts-container">
+            <p><strong>Title:</strong> Spring</p>
+            <p><strong>By:</strong> Blender Studios</p>
+            <p><strong>Genre:</strong> Animation, Fantasy</p>
+            <p><strong>Language Difficulty:</strong> No language</p>
+            <p><strong>Story Difficulty:</strong> Easy</p>
+            <p><strong>Run Time:</strong> 7 minutes 44 seconds</p>
+        </div>
+
+        <section id="nav-buttons-section" class="nav-sections hidden-by-default">
+            <a href="#comprehension1"><button>Test Your Understanding</button></a>
+            <a href="#mistakes"><button>Find the Mistakes</button></a>
+            <a href="#vocabulary"><button>Vocabulary</button></a>
+            <a href="#speaking"><button>Speaking Activities</button></a>
+        </section>
+
+        <div id="comprehension1" class="section">
+            <h2>Test your understanding</h2>
+            <div class="question">
+                <p>1. Near the start of the movie, the girl looks at the forest with a determined face. Why does she do this?</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="a"> A. She has some problems with her health.</label>
+                    <label><input type="radio" name="q1" value="b"> B. She doesn't want to do anything.</label>
+                    <label><input type="radio" name="q1" value="c"> C. She has an important or difficult task ahead of her.</label>
+                    <label><input type="radio" name="q1" value="d"> D. She is confused about what to do.</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>2. How did the girl wake up the first creature?</p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="a"> A. She hit its hoof with her staff.</label>
+                    <label><input type="radio" name="q2" value="b"> B. She hit a rock with her staff.</label>
+                    <label><input type="radio" name="q2" value="c"> C. She played some music.</label>
+                    <label><input type="radio" name="q2" value="d"> D. She threw the staff into the sky.</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>3. What made the creatures restless?</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="a"> A. The dog touched one of them.</label>
+                    <label><input type="radio" name="q3" value="b"> B. They didn't like the tune that the girl played.</label>
+                    <label><input type="radio" name="q3" value="c"> C. The musical note fell off a cliff.</label>
+                    <label><input type="radio" name="q3" value="d"> D. The musical note fell out of the staff.</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>4. In the end, why did the creatures leave the forest?</p>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="a"> A. They didn't like the cold weather.</label>
+                    <label><input type="radio" name="q4" value="b"> B. The girl led them out of the forest with her staff.</label>
+                    <label><input type="radio" name="q4" value="c"> C. They were following the music.</label>
+                    <label><input type="radio" name="q4" value="d"> D. They were scared of the dog.</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>5. At the end of the movie, we see many long chains of notes. What message is this designed to give us?</p>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="a"> A. The circle of life continues.</label>
+                    <label><input type="radio" name="q5" value="b"> B. Life is often difficult.</label>
+                    <label><input type="radio" name="q5" value="c"> C. Spring is warmer and more comfortable than winter.</label>
+                    <label><input type="radio" name="q5" value="d"> D. In life, there are more important things than music.</label>
+                </div>
+            </div>
+            <button class="check-answers-button">Check Answers</button>
+            <button class="reset-button">Reset</button>
+            <div id="answer-feedback"></div>
+        </div>
+
+        <div id="mistakes" class="section">
+            <h2>Find the Mistakes</h2>
+            <div class="instruction-box"><i class="fas fa-lightbulb icon"></i>The story below has five mistakes. Can you find them all?</div>
+            <p id="mistakes-text-content">
+              This is the story of a young shepherd and her dog performing a seasonal ritual. They start in a beautiful place on top of a mountain, but soon journey down into a dark and icy beach. The dog leads the girl to a rock, which she hits hard with her staff. This awakens a mysterious creature with long, tree-like legs. The creature taps her staff with parts of its antennae to create a short tune. The girl taps different parts of the antennae to finish the tune. Each part plays a different musical note. The creature gives one of the parts (notes) to her. She puts it in her staff and it lights up and starts glowing orange. She hits the ground with her staff and then creatures all around the forest start to fall down. A falling tree branch knocks the note out of the staff, which makes the forest creatures restless and scares the girl. They all start to frantically chase the note as it bounces down a path. This creates a dangerous situation, as the girl and dog are in danger of being trampled by the creatures' giant wings. The dog barely manages to prevent the note from falling off a cliff. Moments away from being crushed, the girl grabs the note and puts it back into the staff. This upsets the creatures. Using the staff, she manages to lead the creatures out of the forest. This brings spring to the forest. In a sad ending, the girl hangs the note on a chain of other notes. The camera pans to show a huge cliff full of notes, showing that this has all happened many times before.
+            </p>
+            <button class="check-answers-button">Check answers</button>
+        </div>
+
+        <div id="vocabulary" class="section">
+            <h2>Vocabulary</h2>
+            <div class="instruction-box"><i class="fas fa-lightbulb icon"></i>Drag and drop the correct word into each gap.</div>
+            <div class="draggable-words" id="draggable-words">
+            </div>
+            <ol id="vocabulary-sentences">
+            </ol>
+            <button class="check-answers-button">Check answers</button>
+            <button class="reset-button">Reset</button>
+            <div id="vocabulary-feedback"></div>
+        </div>
+
+        <div id="speaking" class="section">
+            <h2>Speaking Activities</h2>
+            <p>Are you interested in some group speaking activities? <a href="/index.html#contact">Contact us</a> to find out more about how you can talk about this film with a class and a teacher!</p>
+        </div>
+
+        <nav class="page-navigation">
+            <a href="filler.html">
+                <button>← Previous</button>
+            </a>
+            <a href="/index.html">
+                <button>Home</button>
+            </a>
+            <a href="dla_en.html">
+                <button>Next →</button>
+            </a>
+        </nav>
+    </div>
+
+    <div id="footer-placeholder" class="loaded"></div>
+
+    <script src="/script.js"></script>
+    <script src="script-movies.js"></script>
+    <script>
+        // Initialize the page manager with the data defined above
+        document.addEventListener('DOMContentLoaded', () => {
+            pageManager.init(pageData);
+        });
+    </script>
+</body>
+</html>

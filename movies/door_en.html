@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="English practice, movie English, ESL, EFL, listening practice, vocabulary, comprehension, intermediate English, The Door, online English lessons">
+    <meta name="description" content="Improve your English with interactive listening, comprehension, and vocabulary activities based on the short film 'The Door.' Perfect for intermediate English learners.">
+    <title>The Door - English Practice With Short Films</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style-movies.css">
+    <script>
+        // Make sure all necessary data is uncommented and complete here!
+        const pageData = {
+            mainVideoSrc: "https://www.youtube.com/embed/YA3G5vFB6VE",
+            listeningBlanks: [
+                {
+                    id: 'blank1',
+                    solution: 'barely',
+                    explanation: 'This word is similar to <q>hardly</q> and is used when something happened, but almost did not.',
+                    videoSrc: 'clips/The Door/door listening 1.mp4',
+                    transcript: ' Look, Eddie, Eddie, you’re breaking up. I can <span class="blank-word"></span> hear you. The service is terrible out here.'
+                },
+
+                {
+                    id: 'blank2',
+                    solution: 'all about',
+                    explanation: "The speaker is emphasising that he forgot completely.",
+                    videoSrc: 'clips/The Door/door listening 2.mp4',
+                    transcript: 'How long have I been here? And how&#39s Sarah? I forgot <span class="blank-word"></span> Sarah.'
+                },
+                {
+                    id: 'blank3',
+                    solution: 'Never mind',
+                    explanation: 'This is similar to <q>Don&#39t worry about him</q>.',
+                    videoSrc: 'clips/The Door/door listening 3.mp4',
+                    transcript: '<i>Younger man</i>: How do you know Sarah? Is there someone with you?<br><i>Older man</i>: <span class="blank-word"></span> him.'
+                },
+                {
+                    id: 'blank4',
+                    solution: 'one of us',
+                    explanation: '<q>___ of ___ is a commonly used structure in English. Example: <q>Most of the students were on time, but two of them were very late.</q>',
+                    videoSrc: 'clips/The Door/door listening 4.mp4',
+                    transcript: '<i>Older man</i>: No, no, no. You don&#39t understand. Only <span class="blank-word"></span> can leave.'
+                }
+                // ... add more listening blanks as needed
+            ],
+            comprehensionAnswers: {
+                q1: "a", q2: "d", q3: "a", q4: "b", q5: "c"
+            },
+            mistakesToHighlight: [
+                'building', 'his wife', 'different', 'close', 'bear'
+            ],
+            vocabularyDragWords: ['banging', 'trapped', 'breaking up', 'portal', 'prison'],
+            vocabularySentences: [
+                { text: "There was a ____ sound coming from the door.", correctWord: "banging" },
+                { text: "He was ____ in that place for a long time.", correctWord: "trapped" },
+                { text: "The phone connection is bad; his colleague says he is ____.", correctWord: "breaking up" },
+                { text: "The door is a ____ to somewhere else.", correctWord: "portal" },
+                { text: "The man realizes that the place is a ____.", correctWord: "prison" }
+            ],
+            // displayNavigationButtons: false // Set to false to hide the buttons. No. Find this variable in script-movies.js
+        };
+    </script>
+
+</head>
+<body>
+    <div id="header-placeholder" class="loaded"></div>
+
+    <div class="page-content-wrapper">
+        <h1>Short Horror Film - The Door</h1>
+
+        <div class="video-main-container">
+            <iframe id="main-video-iframe" src="https://www.youtube.com/embed/YA3G5vFB6VE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="facts-container">
+            <p><strong>Title:</strong> Short Horror Film - The Door</p>
+            <p><strong>By:</strong> Camp Films (Ryan Camp)</p>
+            <p><strong>Genre:</strong> Horror, Mystery</p>
+            <p><strong>Language Difficulty:</strong> Intermediate</p>
+            <p><strong>Story Difficulty:</strong> Easy</p>
+            <p><strong>Ages:</strong> Teen+ (fear and mild violence)</p>
+            <p><strong>Run Time:</strong> 7 minutes 48 seconds</p>
+        </div>
+
+        <section id="nav-buttons-section" class="nav-sections hidden-by-default">
+            <a href="#listening"><button>Listening</button></a>
+            <a href="#comprehension1"><button>Test Your Understanding</button></a>
+            <a href="#mistakes"><button>Find the Mistakes</button></a>
+            <a href="#vocabulary"><button>Vocabulary</button></a>
+            <a href="#real-talk"><button>Real Talk</button></a>
+            <a href="#speaking"><button>Speaking Activities</button></a>
+        </section>
+
+        <div id="listening" class="section">
+            <h2>Listening</h2>
+        </div>
+
+        <div id="comprehension1" class="section">
+            <h2>Test your understanding</h2>
+            <div class="question">
+                <p>1. What is the man trying to do when he gets a phone call?</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="a"> A. Enjoy nature.</label>
+                    <label><input type="radio" name="q1" value="b"> B. Meet his wife.</label>
+                    <label><input type="radio" name="q1" value="c"> C. Finish a work project.</label>
+                    <label><input type="radio" name="q1" value="d"> D. Find something that he lost.</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>2. What happens when he opens the door?</p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="a"> A. He gets another phone call.</label>
+                    <label><input type="radio" name="q2" value="b"> B. He meets an old friend.</label>
+                    <label><input type="radio" name="q2" value="c"> C. He closes it again.</label>
+                    <label><input type="radio" name="q2" value="d"> D. He gets sucked into a portal.</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>3. Who is the man that he meets?</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="a"> A. Another version of himself.</label>
+                    <label><input type="radio" name="q3" value="b"> B. His twin brother.</label>
+                    <label><input type="radio" name="q3" value="c"> C. A scammer.</label>
+                    <label><input type="radio" name="q3" value="d"> D. Eddie from his work.</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>4. Why did the other man say that he couldn't leave?</p>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="a"> A. The portal only works in one direction.</label>
+                    <label><input type="radio" name="q4" value="b"> B. Only one of them could leave.</label>
+                    <label><input type="radio" name="q4" value="c"> C. You need a key to open the door.</label>
+                    <label><input type="radio" name="q4" value="d"> D. He is going to die.</label>
+                </div>
+            </div>
+            <div class="question">
+                <p>5. Which of the statements below is true?</p>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="a"> A. The two men had the same personality.</label>
+                    <label><input type="radio" name="q5" value="b"> B. After getting trapped, the man did not try to get out.</label>
+                    <label><input type="radio" name="q5" value="c"> C. The older man saw the younger man after getting out.</label>
+                    <label><input type="radio" name="q5" value="d"> D. The man was left alone in the place.</label>
+                </div>
+            </div>
+            <button class="check-answers-button">Check Answers</button>
+            <button class="reset-button">Reset</button>
+            <div id="answer-feedback"></div>
+        </div>
+
+        <div id="mistakes" class="section">
+            <h2>Find the Mistakes</h2>
+            <div class="instruction-box"><i class="fas fa-lightbulb icon"></i>There are five mistakes in the writing below. Can you find them all?</div>
+            <p id="mistakes-text-content">
+            This is a horror movie about a door that is definitely not normal. At the start of the movie, we see a man walking down a path in a building. He is trying to enjoy some time out in nature, but gets a call from his wife. After hanging up, he walks a bit further and sees a door, standing alone along the pathway. Curious and confused, he approaches the door to take a look. He hears someone banging on the door, saying that they are trapped and begging him to close it. When he does this, a strange light appears and he is sucked into it. Soon after, he is thrown out onto the floor on the other side. Another man appears before him and asks him questions. The other man looks exactly like him and is wearing different clothes. When he asks who he is, the other man replies "Isn't it obvious". It is clear that he has met a future version of himself. He tells his older self that he wants to leave this place, but the older self, who has become aggressive after a long time in this environment, tells him that only one person can leave. They have a brief struggle, which soon ends with a monster (which looks like a bear) terrorizing the younger man. The older man uses his opportunity to escape. When he gets out, he sees his younger self approaching the door while having the phone conversation from the start of the movie. The movie ends with the younger man trapped, screaming for help and trying to get out.
+            </p>
+            <button class="check-answers-button">Check answers</button>
+        </div>
+
+        <div id="vocabulary" class="section">
+            <h2>Vocabulary</h2>
+            <div class="instruction-box"><i class="fas fa-lightbulb icon"></i>Drag the correct word to each blank.</div>
+            <div class="draggable-words" id="draggable-words">
+            </div>
+            <ol id="vocabulary-sentences">
+            </ol>
+            <button class="check-answers-button">Check answers</button>
+            <button class="reset-button">Reset</button>
+            <div id="vocabulary-feedback"></div>
+        </div>
+
+        <div id="real-talk" class="section">
+            <h2>Real Talk</h2>
+            <div class="instruction-box"><i class="fas fa-lightbulb icon"></i>Here you will find some language that can often be heard in real life, but isn't usually found in textbooks.</div>
+
+            <div class="real-talk-clip">
+                <div class="clip-video">
+                    <video id="tip1-video" controls>
+                        <source src="clips/The Door/door touch base.mp4" type="video/mp4">
+                        Your browser can not play this video.
+                    </video>
+                </div>
+                <div class="clip-text">
+                    <h3>Touch Base</h3>
+                    <p>To "touch base" is an idiom that means to briefly meet or speak with someone to review a situation or update them. It is very common in business and casual conversation.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="speaking" class="section">
+            <h2>Speaking Activities</h2>
+            <p>Are you interested in some group speaking activities? <a href="/index.html#contact">Contact us</a> to find out more about how you can talk about this film with a class and a teacher!</p>
+        </div>
+
+        <nav class="page-navigation">
+            <a href="crow.html">
+                <button>← Previous</button>
+            </a>
+            <a href="/index.html">
+                <button>Home</button>
+            </a>
+            <a href="next-page.html">
+                <button>Next →</button>
+            </a>
+        </nav>
+    </div>
+
+    <div id="footer-placeholder" class="loaded"></div>
+
+    <script src="../script.js"></script>
+    <script src="script-movies.js"></script>
+    <script>
+        // Initialize the page manager with the data defined above
+        document.addEventListener('DOMContentLoaded', () => {
+            pageManager.init(pageData);
+        });
+    </script>
+</body>
+</html>
